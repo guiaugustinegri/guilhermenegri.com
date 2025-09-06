@@ -632,7 +632,7 @@ body {
 
 .logos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     gap: 1.5rem;
     margin: 4rem auto;
     align-items: center;
@@ -644,19 +644,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
     background: #2d3436;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
-    height: 60px;
-    min-width: 100px;
+    width: 80px;
+    height: 80px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.logo-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .logo-item::before {
@@ -672,14 +667,9 @@ body {
 }
 
 .company-logo {
-    max-width: 100%;
-    max-height: 100%;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    transition: opacity 0.3s ease;
-}
-
-.logo-item:hover .company-logo {
-    opacity: 0.8;
 }
 
 
@@ -1924,9 +1914,14 @@ body {
     }
 
     .logo-item {
+        width: 70px;
+        height: 70px;
+        padding: 0.5rem;
+    }
+
+    .company-logo {
+        width: 50px;
         height: 50px;
-        padding: 0.8rem;
-        min-width: 80px;
     }
 
     .blog-grid {
@@ -2223,9 +2218,14 @@ body {
     }
 
     .logo-item {
+        width: 60px;
+        height: 60px;
+        padding: 0.3rem;
+    }
+
+    .company-logo {
+        width: 45px;
         height: 45px;
-        padding: 0.6rem;
-        min-width: 70px;
     }
 
     .profile-video {
