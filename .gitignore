@@ -1,0 +1,17 @@
+# Arquivos pessoais/drafts
+sobre-guilherme.md
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+
+# Diretórios comuns
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Arquivos de sistema
+*.swp
+*.swo
+*~

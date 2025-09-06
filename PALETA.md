@@ -1,4 +1,4 @@
-# 🎨 Paleta de Cores - Tema Premium
+# 🎨 Paleta de Cores 
 
 ## 📋 Visão Geral
 Paleta de cores sofisticada com tons de roxo/rosa para um visual premium e elegante, combinando profundidade com leveza e usando branco e tons escuros para contraste perfeito.
