@@ -1,97 +1,117 @@
-# 🎨 Paleta de Cores - Tema Escuro
+# 🎨 Paleta de Cores - Tema Premium
 
 ## 📋 Visão Geral
-Paleta de cores para o tema escuro do site, usando tons sofisticados que combinam elegância com boa legibilidade.
+Paleta de cores sofisticada com tons de roxo/rosa para um visual premium e elegante, combinando profundidade com leveza e usando branco e tons escuros para contraste perfeito.
 
 ## 🌙 Cores Principais
 
 ### Backgrounds (Fundos)
-- **Primary Background**: `#0a0a0a` - Fundo principal quase preto
-- **Secondary Background**: `#1a1a1a` - Fundo secundário para seções
-- **Card Background**: `#1f1f1f` - Fundo dos cards com leve brilho
+- **Primary Background**: `#1C1C1C` - Fundo principal cinza muito escuro
+- **Secondary Background**: `#2B2B2B` - Fundo secundário para seções
+- **Card Background**: `#3A3A3A` - Fundo dos cards com profundidade
 
 ### Textos
-- **Primary Text**: `#ffffff` - Texto principal branco puro
-- **Secondary Text**: `#e5e5e5` - Texto secundário cinza muito claro
-- **Muted Text**: `#a8a8a8` - Texto muted para detalhes
-- **Accent Text**: `#722f37` - Texto de destaque na cor vinho
+- **Primary Text**: `#FFFFFF` - Texto principal branco puro
+- **Secondary Text**: `#F5F5F5` - Texto secundário branco suave
+- **Muted Text**: `#CCCCCC` - Texto muted para detalhes
+
+### Cores de Destaque (Paleta Principal)
+- **Primary Accent**: `#853464` - Roxo escuro (funciona como o tom mais sério e profundo, ótimo para títulos ou fundos de destaque)
+- **Secondary Accent**: `#9C5171` - Roxo médio (pode ser usado em elementos de apoio, como boxes e bordas)
+- **Tertiary Accent**: `#BE6577` - Rosado avermelhado (suave, pode entrar em detalhes ou backgrounds secundários)
+- **Light Accent**: `#FFDE8F` - Amarelo pastel (traz luz e contraste, ótimo para destacar áreas claras e contrabalancear os tons mais pesados)
+- **Vibrant Accent**: `#FA813C` - Laranja vibrante (perfeito para CTAs, botões, ícones ou elementos que precisam chamar atenção)
+
+### Elementos Neutros
+- **Branco**: `#FFFFFF` - Dá o respiro necessário no layout, principalmente em fundos
+- **Preto/Cinza Escuro**: `#1C1C1C` ou `#2B2B2B` - Pode ser usado em tipografia ou para reforçar contraste
 
 ### Bordas e Divisores
-- **Border Color**: `#333333` - Bordas principais
-- **Border Light**: `#404040` - Bordas mais claras
-- **Divider**: `#2a2a2a` - Linhas divisórias
+- **Border Color**: `#555555` - Bordas principais
+- **Border Light**: `#666666` - Bordas mais claras
+- **Divider**: `#444444` - Linhas divisórias
 
 ### Sombras e Efeitos
-- **Shadow Dark**: `rgba(0, 0, 0, 0.3)` - Sombras escuras
-- **Shadow Light**: `rgba(0, 0, 0, 0.1)` - Sombras leves
-- **Glow Effect**: `rgba(114, 47, 55, 0.2)` - Efeito de brilho vinho
-
-## 🎨 Cores de Destaque (Paleta Original)
-- **Primary Accent**: `#722f37` - Vinho/Borgonha
-- **Secondary Accent**: `#6b7f5a` - Verde Oliva
-- **Hover State**: `#8b3f4a` - Vinho mais claro para hover
+- **Shadow Dark**: `rgba(0, 0, 0, 0.4)` - Sombras escuras
+- **Shadow Light**: `rgba(0, 0, 0, 0.2)` - Sombras leves
+- **Glow Primary**: `rgba(133, 52, 100, 0.3)` - Brilho roxo escuro
+- **Glow Secondary**: `rgba(156, 81, 113, 0.2)` - Brilho roxo médio
 
 ## 📱 Aplicação por Componente
 
 ### Menu de Navegação
-- Background: `rgba(10, 10, 10, 0.95)`
-- Text: `#e5e5e5`
+- Background: `rgba(28, 28, 28, 0.95)`
+- Text: `#F5F5F5`
 - Border: `rgba(255, 255, 255, 0.1)`
-- Hover: `#722f37`
+- Hover: `#853464`
 
 ### Seção Hero
 - Background Video: Vídeo com overlay
-- Overlay: `linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%)`
-- Text: `#ffffff`
-- Highlight: `rgba(114, 47, 55, 0.2)` background com `#722f37` text
+- Overlay: `linear-gradient(135deg, rgba(28, 28, 28, 0.7) 0%, rgba(43, 43, 43, 0.6) 50%, rgba(133, 52, 100, 0.1) 100%)`
+- Text: `#FFFFFF`
+- Highlight: `rgba(133, 52, 100, 0.2)` background com `#FFFFFF` text
 
 ### Cards e Componentes
-- Background: `#1f1f1f`
-- Border: `#333333`
-- Shadow: `0 10px 30px rgba(0, 0, 0, 0.3)`
-- Hover Shadow: `0 20px 40px rgba(0, 0, 0, 0.4)`
+- Background: `#3A3A3A`
+- Border: `#555555`
+- Shadow: `0 15px 35px rgba(0, 0, 0, 0.4)`
+- Hover Shadow: `0 25px 50px rgba(0, 0, 0, 0.5)`
 
 ### Botões
-- Primary: `#722f37` background, `#ffffff` text
-- Secondary: `transparent` background, `#e5e5e5` text, `#722f37` border
-- Hover: `#8b3f4a` background (vinho mais claro)
+- Primary: `#853464` background, `#FFFFFF` text
+- Secondary: `#9C5171` background, `#FFFFFF` text
+- CTA: `#FA813C` background, `#FFFFFF` text
+- Hover: Cores mais claras dos respectivos tons
 
 ## 🎯 Princípios de Uso
 
-1. **Contraste**: Sempre manter contraste mínimo de 4.5:1 para acessibilidade
-2. **Hierarquia**: Usar diferentes tons de cinza para criar hierarquia visual
-3. **Consistência**: Aplicar as mesmas cores em componentes similares
-4. **Acentos**: Usar vinho e oliva apenas para elementos de destaque
-5. **Transições**: Manter suavidade nas transições entre estados
+1. **Contraste**: Branco sobre tons escuros para máxima legibilidade
+2. **Hierarquia**: Usar tons de roxo do escuro ao claro para profundidade
+3. **Consistência**: Aplicar a mesma família de cores em componentes similares
+4. **Acentos**: Usar laranja para CTAs e amarelo para destaques especiais
+5. **Neutros**: Branco e cinzas escuros para equilíbrio e contraste
 
 ## 📊 Códigos Hexadecimais (Referência Rápida)
 
 ```css
 /* Backgrounds */
---bg-primary: #0a0a0a;
---bg-secondary: #1a1a1a;
---bg-card: #1f1f1f;
+--bg-primary: #1C1C1C;
+--bg-secondary: #2B2B2B;
+--bg-card: #3A3A3A;
 
 /* Textos */
---text-primary: #ffffff;
---text-secondary: #e5e5e5;
---text-muted: #a8a8a8;
+--text-primary: #FFFFFF;
+--text-secondary: #F5F5F5;
+--text-muted: #CCCCCC;
 
 /* Acentos */
---accent-primary: #722f37;
---accent-secondary: #6b7f5a;
---accent-hover: #8b3f4a;
+--accent-primary: #853464;    /* Roxo escuro */
+--accent-secondary: #9C5171;  /* Roxo médio */
+--accent-tertiary: #BE6577;   /* Rosado */
+--accent-light: #FFDE8F;      /* Amarelo pastel */
+--accent-vibrant: #FA813C;    /* Laranja vibrante */
+
+/* Elementos Neutros */
+--white: #FFFFFF;
+--dark-gray: #1C1C1C;
 
 /* Bordas */
---border-primary: #333333;
---border-light: #404040;
---divider: #2a2a2a;
+--border-primary: #555555;
+--border-light: #666666;
+--divider: #444444;
+
+/* Sombras */
+--shadow-dark: rgba(0, 0, 0, 0.4);
+--shadow-light: rgba(0, 0, 0, 0.2);
+--glow-primary: rgba(133, 52, 100, 0.3);
+--glow-secondary: rgba(156, 81, 113, 0.2);
 ```
 
 ## ✅ Checklist de Implementação
 
-- [ ] Atualizar variáveis CSS no :root
-- [ ] Aplicar cores em todas as seções
-- [ ] Verificar contraste de acessibilidade
-- [ ] Testar em diferentes dispositivos
-- [ ] Validar consistência visual
+- [x] Atualizar variáveis CSS no :root
+- [x] Aplicar cores em todas as seções
+- [x] Verificar contraste de acessibilidade
+- [x] Testar em diferentes dispositivos
+- [x] Validar consistência visual
+- [x] Atualizar gradientes para usar nova paleta
