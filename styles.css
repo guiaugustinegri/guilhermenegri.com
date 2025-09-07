@@ -2444,6 +2444,15 @@ body {
     text-decoration: underline;
 }
 
+.footer-disclaimer {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    font-style: italic;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
 .footer-separator {
     color: var(--text-muted);
     margin: 0 0.5rem;
