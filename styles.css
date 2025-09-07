@@ -1872,6 +1872,19 @@ body {
         transform: translateX(5px);
     }
 
+    /* Tração Link Style */
+    .tracao-link {
+        color: var(--accent-primary);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .tracao-link:hover {
+        color: var(--accent-secondary);
+        text-decoration: underline;
+    }
+
     /* Tração Logo Social Icon Mobile */
     .social-link.tracao {
         width: 45px;
