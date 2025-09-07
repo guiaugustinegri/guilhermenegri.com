@@ -25,62 +25,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="image/guilherme-negri-especialista-crescimento-startups.png">
 
-    <!-- Schema.org Person Markup -->
+    <!-- Schema.org Person and Book Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://guilhermenegri.com/#person",
-      "mainEntityOfPage": "https://guilhermenegri.com/",
-      "name": "Guilherme Negri",
-      "alternateName": "Guilherme Augusti Negri",
-      "url": "https://guilhermenegri.com/",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://guilhermenegri.com/image/guilherme-negri-especialista-crescimento-startups.png",
-        "width": 800,
-        "height": 800,
-        "caption": "Retrato profissional de Guilherme Negri, especialista em crescimento de startups"
-      },
-      "jobTitle": "Especialista em Crescimento de Startups",
-      "description": "Ajudo startups a validar produtos e construir crescimento previsível da primeira venda ao scale-up. Mentor de mais de 240 startups atendidas.",
-      "email": "guilherme@tracao.online",
-      "worksFor": {
-        "@type": "Organization",
-        "@id": "https://www.tracao.online/#organization",
-        "name": "Tração.Online",
-        "url": "https://www.tracao.online/"
-      },
-      "alumniOf": {
-        "@type": "Organization",
-        "name": "Coletivo Verde"
-      },
-      "knowsAbout": [
-        "Marketing Digital",
-        "Growth Hacking",
-        "Startups",
-        "Validação de Produtos",
-        "Inteligência Artificial",
-        "Estratégia de Crescimento",
-        "Experimentação de Produto"
-      ],
-      "author": {
-        "@type": "CreativeWork",
-        "@id": "https://guilhermenegri.com/#book",
-        "name": "Faça Coisas que Não Escalam",
-        "url": "https://www.tracao.online/faca-coisas-que-nao-escalam",
-        "sameAs": [
-          "https://www.amazon.com.br/Fa%C3%A7a-Coisas-que-N%C3%A3o-Escalam-ebook/dp/B08WCF54M8"
-        ]
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/guilhermeaugustinegri/",
-        "https://www.instagram.com/guiaugustinegri/",
-        "https://twitter.com/guilhermex",
-        "https://www.tracao.online/",
-        "https://www.tracao.online/faca-coisas-que-nao-escalam",
-        "https://www.wikidata.org/wiki/Q136140722",
-        "https://commons.wikimedia.org/wiki/File:Guilherme_Negri_-_Startup_Growth_Specialist.png"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://guilhermenegri.com/#person",
+          "mainEntityOfPage": "https://guilhermenegri.com/",
+          "name": "Guilherme Negri",
+          "alternateName": "Guilherme Augusti Negri",
+          "url": "https://guilhermenegri.com/",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://guilhermenegri.com/image/guilherme-negri-especialista-crescimento-startups.png",
+            "width": 800,
+            "height": 800,
+            "caption": "Retrato profissional de Guilherme Negri, especialista em crescimento de startups"
+          },
+          "jobTitle": "Especialista em Crescimento de Startups",
+          "description": "Ajudo startups a validar produtos e construir crescimento previsível da primeira venda ao scale-up. Mentor de mais de 240 startups atendidas.",
+          "email": "guilherme@tracao.online",
+          "worksFor": {
+            "@type": "Organization",
+            "@id": "https://www.tracao.online/#organization",
+            "name": "Tração.Online",
+            "url": "https://www.tracao.online/"
+          },
+          "alumniOf": {
+            "@type": "Organization",
+            "name": "Coletivo Verde"
+          },
+          "knowsAbout": [
+            "Marketing Digital",
+            "Growth Hacking",
+            "Startups",
+            "Validação de Produtos",
+            "Inteligência Artificial",
+            "Estratégia de Crescimento",
+            "Experimentação de Produto"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/guilhermeaugustinegri/",
+            "https://www.instagram.com/guiaugustinegri/",
+            "https://twitter.com/guilhermex",
+            "https://www.crunchbase.com/person/guilherme-augusti-negri",
+            "https://www.tracao.online/",
+            "https://www.tracao.online/faca-coisas-que-nao-escalam",
+            "https://www.wikidata.org/wiki/Q136140722",
+            "https://commons.wikimedia.org/wiki/File:Guilherme_Negri_-_Startup_Growth_Specialist.png"
+          ]
+        },
+        {
+          "@type": "Book",
+          "@id": "https://guilhermenegri.com/#book",
+          "name": "Faça Coisas que Não Escalam",
+          "url": "https://www.tracao.online/faca-coisas-que-nao-escalam",
+          "author": {
+            "@id": "https://guilhermenegri.com/#person"
+          },
+          "sameAs": [
+            "https://www.amazon.com.br/Fa%C3%A7a-Coisas-que-N%C3%A3o-Escalam-ebook/dp/B08WCF54M8"
+          ]
+        }
       ]
     }
     </script>
