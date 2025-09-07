@@ -1866,11 +1866,23 @@ body {
     border-bottom: 1px solid transparent;
 }
 
-.contact-link:hover {
-    color: var(--text-primary);
-    border-bottom-color: var(--accent-primary);
-    transform: translateX(5px);
-}
+    .contact-link:hover {
+        color: var(--text-primary);
+        border-bottom-color: var(--accent-primary);
+        transform: translateX(5px);
+    }
+
+    /* Tração Logo Social Icon Mobile */
+    .social-link.tracao {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-icon-image {
+        width: 24px;
+        height: 24px;
+    }
+
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -2384,5 +2396,82 @@ body {
         font-size: 1.1rem;
         padding: 0 0.5rem;
         line-height: 1.6;
+    }
+}
+
+/* Footer Styles */
+.footer-section {
+    background-color: var(--bg-primary);
+    padding: 3rem 0 2rem 0;
+    border-top: 1px solid var(--border-primary);
+    margin-top: 4rem;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-link {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.footer-link:hover {
+    color: var(--accent-secondary);
+    text-decoration: underline;
+}
+
+.footer-separator {
+    color: var(--text-muted);
+    margin: 0 0.5rem;
+}
+
+/* Footer Responsivo */
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 2rem 0 1.5rem 0;
+        margin-top: 3rem;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .footer-link {
+        margin: 0 0.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section {
+        padding: 1.5rem 0 1rem 0;
+        margin-top: 2rem;
+    }
+
+    .footer-text {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    /* Tração Logo Social Icon Small Mobile */
+    .social-link.tracao {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon-image {
+        width: 20px;
+        height: 20px;
     }
 }
