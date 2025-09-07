@@ -4,11 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Menu Mobile Toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const navOverlay = document.querySelector('.nav-overlay');
 
-    if (navToggle && navLinks) {
+    if (navToggle && navLinks && navOverlay) {
         navToggle.addEventListener('click', function() {
             navToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar no overlay
+        navOverlay.addEventListener('click', function() {
+            navToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
         });
     }
 
@@ -31,9 +40,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 // Fechar menu mobile após navegação
-                if (navToggle && navLinks) {
+                if (navToggle && navLinks && navOverlay) {
                     navToggle.classList.remove('active');
                     navLinks.classList.remove('active');
+                    navOverlay.classList.remove('active');
                 }
             }
         });
