@@ -2416,8 +2416,7 @@ body {
 .footer-section {
     background-color: var(--bg-primary);
     padding: 3rem 0 2rem 0;
-    border-top: 1px solid var(--border-primary);
-    margin-top: 4rem;
+    margin-top: 0;
 }
 
 .footer-content {
