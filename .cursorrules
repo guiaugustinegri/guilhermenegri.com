@@ -1,0 +1,13 @@
+# Regras desta pasta. Contexto completo: ./AGENTS.md
+
+- Hospedagem: GitHub Pages (repo `guiaugustinegri/guilhermenegri.com`). Push na
+  `master` PUBLICA o site (1 a 2 min). Sem build: arquivos servidos como estão.
+- DNS na GoDaddy apontando pro GitHub Pages. Este domínio NÃO passa pelo
+  Cloudflare (Cloudflare é o tracao.online e as landings do livro).
+- Link do e-book: `https://facacoisasquenaoescalam.com.br/` em 3 lugares do
+  index.html (botão + 2x JSON-LD). Mudou um, mude os 3.
+- Últimas Publicações (4 cards + CTA) e o ícone WordPress dos sociais apontam
+  pro blog.tracao.online.
+- Paleta/visual: PALETA.md. Ícones sociais: SVG inline com currentColor.
+- Todo arquivo commitado vira URL pública.
+- Responda em pt-BR.

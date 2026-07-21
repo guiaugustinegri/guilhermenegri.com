@@ -5,8 +5,13 @@ Site minimalista e moderno para guilhermenegri.com, construído com HTML, CSS e 
 ## Hospedagem
 
 - **GitHub Pages** no repo `guiaugustinegri/guilhermenegri.com`, domínio via `CNAME`
-  (`guilhermenegri.com`). Push na `master` publica sozinho.
-- Não tem build: `index.html` + `styles.css` + `script.js` são servidos como estão.
+  (`guilhermenegri.com`). Push na `master` publica sozinho (build leva 1 a 2 min).
+- **DNS na GoDaddy** (`ns71/ns72.domaincontrol.com`), registros A apontando pros
+  IPs do GitHub Pages (`185.199.108.153` a `185.199.111.153`). Este domínio **não
+  passa pelo Cloudflare**: Cloudflare é só o ecossistema `tracao.online` e as
+  landings do livro (Worker `tracao-site`, ver `..\AGENTS.md` da pasta Sites).
+- Não tem build local: `index.html` + `styles.css` + `script.js` são servidos como estão.
+- Todo arquivo do repo vira URL pública (este README inclusive).
 - Paleta e decisões visuais: ver `PALETA.md`.
 
 ## O link do livro
