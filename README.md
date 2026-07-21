@@ -9,25 +9,31 @@ Site minimalista e moderno para guilhermenegri.com, construído com HTML, CSS e 
 - Não tem build: `index.html` + `styles.css` + `script.js` são servidos como estão.
 - Paleta e decisões visuais: ver `PALETA.md`.
 
-## O link do livro (não "corrigir"!)
+## O link do livro
 
-O CTA do e-book *Faça Coisas que Não Escalam* aponta de propósito pra cópia da
-landing dentro do site da Tração:
+O CTA do e-book *Faça Coisas que Não Escalam* aponta pro domínio oficial da
+campanha:
 
 ```
-https://www.tracao.online/faca-coisas-que-nao-escalam
+https://facacoisasquenaoescalam.com.br/
 ```
 
 Ele aparece em 3 lugares do `index.html`: no botão visível (`.ebook-link`) e
 duas vezes no JSON-LD (dados estruturados). Se mudar, mudar nos 3.
 
-**Por que esse endereço, e não `facacoisasquenaoescalam.com.br`?** Decisão de
-18/07/2026: o visitante que sai do site pessoal continua dentro do ecossistema
-`tracao.online`. E não há problema de SEO nisso: as duas cópias da landing
-declaram `<link rel="canonical" href="https://facacoisasquenaoescalam.com.br/">`,
-então o Google consolida a autoridade (incluindo o backlink deste site) no
-domínio oficial da campanha. Canonical não redireciona: o leitor fica na URL da
-Tração, só o crédito de busca aponta pro domínio do livro.
+**Histórico da decisão:** em 18/07/2026 o link apontava pra cópia da landing em
+`www.tracao.online/faca-coisas-que-nao-escalam` (manter o visitante no
+ecossistema `tracao.online`; o canonical já consolidava a autoridade no domínio
+do livro). Em 21/07/2026 o Gui decidiu apontar direto pro domínio da campanha,
+que é a URL canônica que o Google indexou — o backlink deste site passa a ir
+sem intermediário pro endereço oficial.
+
+## Últimas Publicações e blog (21/07/2026)
+
+Os 4 cards de "Últimas Publicações" e o botão "Ver todas as publicações"
+apontam pros artigos correspondentes no `blog.tracao.online` (antes era
+LinkedIn). Também há um ícone de WordPress nos links sociais do contato
+levando pro blog. Se um artigo mudar de slug no WP, atualizar o card.
 
 **Contexto completo da infraestrutura** (Worker da Cloudflare, as duas cópias
 da landing, a regra "editou uma, edite a outra"): ver
