@@ -13,6 +13,10 @@ Site minimalista e moderno para guilhermenegri.com, construído com HTML, CSS e 
 - Não tem build local: `index.html` + `styles.css` + `script.js` são servidos como estão.
 - Todo arquivo do repo vira URL pública (este README inclusive).
 - Paleta e decisões visuais: ver `PALETA.md`.
+- Arquivos para agentes: `llms.txt`, `sitemap.xml`, `robots.txt`, gêmeos
+  markdown (`index.md`, `about/index.md`, …) e `404.html`.
+- Testes: `npm test` (Node, sem dependências).
+
 
 ## O link do livro
 

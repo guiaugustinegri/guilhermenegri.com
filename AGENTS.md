@@ -25,7 +25,17 @@ Site pessoal do Guilherme Negri. HTML/CSS/JS puro, sem framework e sem build.
   `https://blog.tracao.online/` (WordPress na Hostinger; contexto em
   `..\blog-tracao\AGENTS.md`). Se um artigo mudar de slug no WP, atualizar o card.
 - **Ícone do WordPress** nos links sociais do contato: leva pro blog.
-- JSON-LD: manter os `@id` (`#person`, `#book`), são eles que amarram o schema.
+- JSON-LD: manter os `@id` (`#person`, `#book`, `#website` e
+  `https://www.tracao.online/#organization`), são eles que amarram o schema.
+- Páginas de confiança: `/about/`, `/contact/`, `/privacy/`. Cada uma tem
+  gêmeo markdown (`index.md`). A home também tem `/index.md`.
+- Agentes: `/llms.txt` (formato llmstxt.org, seção "When to use this"),
+  `/sitemap.xml`, `/robots.txt`, `/404.html` (GitHub Pages devolve HTTP 404)
+  e `/404.md`.
+- Negociação `Accept: text/markdown` (acceptmarkdown.com) não roda no GitHub
+  Pages. O Worker em `src/worker.js` cobre o protocolo (`Vary: Accept`) e só
+  entra no ar se o domínio passar a ser servido por Cloudflare Workers Assets.
+  Até lá, use os gêmeos `.md` e o `rel="alternate"`.
 
 ## Visual
 
