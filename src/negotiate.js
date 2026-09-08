@@ -9,6 +9,29 @@ const STATIC_EXT =
 
 const PRODUCES = ["text/html", "text/markdown"];
 
+export const CANONICAL_HOST = "guilhermenegri.com";
+
+export const SITE_HOSTS = new Set([
+  "guilhermenegri.com",
+  "www.guilhermenegri.com",
+  "guilhermenegri.com.br",
+  "www.guilhermenegri.com.br",
+]);
+
+/**
+ * Only www → apex on the same TLD. The .com.br apex is served in place so
+ * agents do not have to follow HubSpot's old DomainRedirectResolver 301.
+ */
+export function wwwRedirectLocation(url) {
+  const host = url.hostname.toLowerCase();
+  if (!SITE_HOSTS.has(host) || !host.startsWith("www.")) return null;
+  const dest = new URL(url.href);
+  dest.hostname = host.slice(4);
+  dest.protocol = "https:";
+  dest.port = "";
+  return dest.href;
+}
+
 export function parseAccept(header) {
   return header
     .split(",")
@@ -110,6 +133,14 @@ async function fetchFirstOk(env, request, paths) {
 
 export async function handleRequest(request, env) {
   const url = new URL(request.url);
+
+  const wwwLocation = wwwRedirectLocation(url);
+  if (wwwLocation) {
+    return new Response(null, {
+      status: 308,
+      headers: { Location: wwwLocation },
+    });
+  }
 
   if (isMarkdownPath(url.pathname)) {
     const asset = await env.ASSETS.fetch(request);

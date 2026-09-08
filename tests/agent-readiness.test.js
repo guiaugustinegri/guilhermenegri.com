@@ -3,7 +3,7 @@ import { readFile, stat } from "node:fs/promises";
 import { extname, join, normalize, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
-import { handleRequest, preferredType } from "../src/negotiate.js";
+import { handleRequest, preferredType, wwwRedirectLocation } from "../src/negotiate.js";
 
 const ROOT = resolve(fileURLToPath(new URL("..", import.meta.url)));
 
@@ -129,8 +129,8 @@ function fileAssets() {
   };
 }
 
-async function siteRequest(path, headers = {}) {
-  const request = new Request(`https://guilhermenegri.com${path}`, { headers });
+async function siteRequest(path, headers = {}, host = "guilhermenegri.com") {
+  const request = new Request(`https://${host}${path}`, { headers });
   return handleRequest(request, { ASSETS: fileAssets() });
 }
 
@@ -308,4 +308,40 @@ test("explicitly unacceptable types return 406", async () => {
   const res = await siteRequest("/", { Accept: "application/pdf" });
   assert.equal(res.status, 406);
   assert.match(res.headers.get("vary"), /Accept/i);
+});
+
+test("wwwRedirectLocation strips www on the same TLD and keeps path + query", () => {
+  assert.equal(
+    wwwRedirectLocation(new URL("https://www.guilhermenegri.com/about/?utm=1")),
+    "https://guilhermenegri.com/about/?utm=1",
+  );
+  assert.equal(
+    wwwRedirectLocation(new URL("https://www.guilhermenegri.com.br/llms.txt")),
+    "https://guilhermenegri.com.br/llms.txt",
+  );
+  assert.equal(wwwRedirectLocation(new URL("https://guilhermenegri.com/")), null);
+  assert.equal(wwwRedirectLocation(new URL("https://guilhermenegri.com.br/about/")), null);
+});
+
+test("www hosts 308 to the matching apex", async () => {
+  const res = await siteRequest("/about/?utm=1", {}, "www.guilhermenegri.com");
+  assert.equal(res.status, 308);
+  assert.equal(res.headers.get("location"), "https://guilhermenegri.com/about/?utm=1");
+});
+
+test(".com.br apex serves content instead of HubSpot's 301", async () => {
+  const html = await siteRequest("/", { Accept: "text/html" }, "guilhermenegri.com.br");
+  assert.equal(html.status, 200);
+  assert.match(html.headers.get("content-type"), /text\/html/);
+  assert.equal(html.headers.get("location"), null);
+
+  const md = await siteRequest("/", { Accept: "text/markdown" }, "guilhermenegri.com.br");
+  assert.equal(md.status, 200);
+  assert.match(md.headers.get("content-type"), /text\/markdown/);
+  assert.equal(md.headers.get("location"), null);
+  assert.match(await md.text(), /^# Guilherme Negri/m);
+
+  const llms = await siteRequest("/llms.txt", {}, "guilhermenegri.com.br");
+  assert.equal(llms.status, 200);
+  assert.match(await llms.text(), /^# Guilherme Negri/m);
 });

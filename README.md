@@ -4,18 +4,19 @@ Site minimalista e moderno para guilhermenegri.com, construído com HTML, CSS e 
 
 ## Hospedagem
 
-- **GitHub Pages** no repo `guiaugustinegri/guilhermenegri.com`, domínio via `CNAME`
-  (`guilhermenegri.com`). Push na `master` publica sozinho (build leva 1 a 2 min).
-- **DNS na GoDaddy** (`ns71/ns72.domaincontrol.com`), registros A apontando pros
-  IPs do GitHub Pages (`185.199.108.153` a `185.199.111.153`). Este domínio **não
-  passa pelo Cloudflare**: Cloudflare é só o ecossistema `tracao.online` e as
-  landings do livro (Worker `tracao-site`, ver `..\AGENTS.md` da pasta Sites).
+- **Cloudflare Workers Assets**, Worker `guilhermenegri-com` (`wrangler.jsonc`).
+  Push na `master` publica via GitHub Actions + Wrangler.
+- **Canônico** `https://guilhermenegri.com/`. O apex `guilhermenegri.com.br`
+  serve o mesmo site — não é mais o 301 do HubSpot (portal `43675378`,
+  `DomainRedirectResolver`), que atrapalhava agentes (`Accept: text/markdown`,
+  `llms.txt`). `www` dos dois TLDs dá 308 para o apex correspondente.
+- Cutover de DNS e a desconexão do domínio no HubSpot: ver `AGENTS.md`.
 - Não tem build local: `index.html` + `styles.css` + `script.js` são servidos como estão.
-- Todo arquivo do repo vira URL pública (este README inclusive).
+- Todo arquivo do repo (fora `.assetsignore`) vira URL pública (este README inclusive).
 - Paleta e decisões visuais: ver `PALETA.md`.
 - Arquivos para agentes: `llms.txt`, `sitemap.xml`, `robots.txt`, gêmeos
   markdown (`index.md`, `about/index.md`, …) e `404.html`.
-- Testes: `npm test` (Node, sem dependências).
+- Testes: `npm test` (Node, sem dependências). `npx wrangler dev` para o Worker.
 
 
 ## O link do livro

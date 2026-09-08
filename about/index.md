@@ -12,7 +12,7 @@ Guilherme também escreveu o livro [Faça Coisas que Não Escalam](https://facac
 
 ## Como verificar quem é
 
-O nome completo é Guilherme Augusti Negri. O site oficial é https://guilhermenegri.com/ (https://guilhermenegri.com.br/ redireciona para o mesmo destino).
+O nome completo é Guilherme Augusti Negri. O site oficial é https://guilhermenegri.com/ (https://guilhermenegri.com.br/ serve o mesmo conteúdo).
 
 - LinkedIn: https://www.linkedin.com/in/guilhermeaugustinegri/
 - Wikidata: https://www.wikidata.org/wiki/Q136140722

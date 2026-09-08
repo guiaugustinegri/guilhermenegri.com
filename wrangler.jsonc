@@ -2,13 +2,25 @@
   "name": "guilhermenegri-com",
   "main": "src/worker.js",
   "compatibility_date": "2026-04-18",
+  "workers_dev": true,
+  "preview_urls": true,
   "assets": {
     "directory": ".",
     "binding": "ASSETS",
-    // Worker sees every request — required for Accept negotiation.
+    // Worker sees every request — required for Accept negotiation
+    // and to keep .com.br from falling through to HubSpot's 301.
     // https://acceptmarkdown.com/recipes/cloudflare-workers
     "run_worker_first": ["*"],
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
-  }
+  },
+  // Custom domains only resolve after the zones are in this Cloudflare
+  // account. Cutover: AGENTS.md (guilhermenegri.com na GoDaddy → CF;
+  // desconectar guilhermenegri.com.br do HubSpot portal 43675378).
+  "routes": [
+    { "pattern": "guilhermenegri.com", "custom_domain": true },
+    { "pattern": "www.guilhermenegri.com", "custom_domain": true },
+    { "pattern": "guilhermenegri.com.br", "custom_domain": true },
+    { "pattern": "www.guilhermenegri.com.br", "custom_domain": true }
+  ]
 }
