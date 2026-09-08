@@ -2,17 +2,32 @@
 
 Site pessoal do Guilherme Negri. HTML/CSS/JS puro, sem framework e sem build.
 
-## Hospedagem e deploy (nada de Cloudflare aqui)
+## Hospedagem (Cloudflare Workers Assets)
 
-- **GitHub Pages**, repo `guiaugustinegri/guilhermenegri.com`. **Push na
-  `master` publica sozinho** (o build do Pages leva 1 a 2 min). Não tem CI nem
-  build local: `index.html` + `styles.css` + `script.js` são servidos como estão.
-- Domínio custom via arquivo `CNAME` (`guilhermenegri.com`).
-- **DNS na GoDaddy** (`ns71/ns72.domaincontrol.com`), registros A apontando pros
-  IPs do GitHub Pages (`185.199.108.153` a `185.199.111.153`). O domínio **não
-  passa pelo Cloudflare**. Quem está no Cloudflare é o `tracao.online` e as
-  landings do livro (Worker `tracao-site`, contexto em `..\AGENTS.md`).
-- Todo arquivo commitado vira URL pública (ex.: `guilhermenegri.com/README.md`).
+- Worker `guilhermenegri-com` (`wrangler.jsonc` + `src/worker.js`). Push na
+  `master` publica via `.github/workflows/deploy.yml` (Wrangler). Não tem
+  build: os arquivos estáticos são o próprio site.
+- **Canônico:** `https://guilhermenegri.com/`. O apex `guilhermenegri.com.br`
+  serve o **mesmo** conteúdo (sem 301). `www` dos dois TLDs dá 308 para o
+  apex do mesmo TLD. Canonical no HTML continua no `.com`.
+- **Por que saiu do HubSpot:** `guilhermenegri.com.br` estava no portal
+  `43675378` (`x-hs-cfworker-meta: DomainRedirectResolver`) e respondia 301
+  para o `.com`. Esse 301 (e o bot management `__cf_bm` do HubSpot) atrapalha
+  agente que pede `Accept: text/markdown` ou `llms.txt`. O Worker assume os
+  dois apexes.
+- **Cutover (uma vez, no dashboard):**
+  1. Secrets no GitHub: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`.
+  2. Zona `guilhermenegri.com` no Cloudflare (hoje o DNS ainda está na
+     GoDaddy, `ns71/ns72.domaincontrol.com`, A nos IPs do GitHub Pages).
+     Trocar NS na GoDaddy para os da zona CF.
+  3. No HubSpot (portal `43675378`), desconectar o domínio
+     `guilhermenegri.com.br` como redirect. A zona já usa NS Cloudflare
+     (`alberto`/`mckenzie`).
+  4. `npx wrangler deploy` (ou o Actions na `master`) cria os custom
+     domains dos 4 hosts.
+- GitHub Pages + arquivo `CNAME` ficam como rollback. Com o DNS no
+  Cloudflare, o Pages deixa de receber tráfego.
+- Todo arquivo commitado que não está no `.assetsignore` vira URL pública.
 
 ## Links que têm dono (não "corrigir" sem contexto)
 
@@ -30,12 +45,9 @@ Site pessoal do Guilherme Negri. HTML/CSS/JS puro, sem framework e sem build.
 - Páginas de confiança: `/about/`, `/contact/`, `/privacy/`. Cada uma tem
   gêmeo markdown (`index.md`). A home também tem `/index.md`.
 - Agentes: `/llms.txt` (formato llmstxt.org, seção "When to use this"),
-  `/sitemap.xml`, `/robots.txt`, `/404.html` (GitHub Pages devolve HTTP 404)
-  e `/404.md`.
-- Negociação `Accept: text/markdown` (acceptmarkdown.com) não roda no GitHub
-  Pages. O Worker em `src/worker.js` cobre o protocolo (`Vary: Accept`) e só
-  entra no ar se o domínio passar a ser servido por Cloudflare Workers Assets.
-  Até lá, use os gêmeos `.md` e o `rel="alternate"`.
+  `/sitemap.xml`, `/robots.txt`, `/404.html` e `/404.md`.
+- Negociação `Accept: text/markdown` (acceptmarkdown.com): o Worker em
+  `src/worker.js` cobre o protocolo (`Vary: Accept`) nos dois apexes.
 
 ## Visual
 
@@ -45,5 +57,13 @@ Site pessoal do Guilherme Negri. HTML/CSS/JS puro, sem framework e sem build.
 
 ## Verificar depois de publicar
 
-O edge/CDN do Pages segura cache. Confirme mudanças com query string aleatória:
-`curl -s "https://guilhermenegri.com/?v=123" | grep <trecho novo>`.
+O edge segura cache. Confirme com query string aleatória nos **dois** apexes:
+
+```
+curl -sI "https://guilhermenegri.com.br/?v=123"
+curl -sI -H "Accept: text/markdown" "https://guilhermenegri.com.br/"
+curl -s "https://guilhermenegri.com/?v=123" | grep <trecho novo>
+```
+
+O `.com.br` tem que responder **200** (não 301 do HubSpot). Markdown no
+`Accept` tem que voltar `content-type: text/markdown`.

@@ -3,6 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/agent-readiness.test.js"
+    "test": "node --test tests/agent-readiness.test.js",
+    "dev": "npx wrangler dev",
+    "deploy": "npx wrangler deploy"
   }
 }

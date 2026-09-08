@@ -1,6 +1,6 @@
 # Política de privacidade
 
-Esta política descreve como o site oficial de Guilherme Negri (https://guilhermenegri.com/) trata informações. Última atualização: 7 de setembro de 2026.
+Esta política descreve como o site oficial de Guilherme Negri (https://guilhermenegri.com/) trata informações. Última atualização: 8 de setembro de 2026.
 
 Responsável: Guilherme Augusti Negri, em nome da Traction & Growth Ltda (Tração.Online). Contato: guilherme@tracao.online.
 
@@ -12,7 +12,7 @@ Se você escreve para o e-mail publicado em https://guilhermenegri.com/contact/,
 
 ## Hospedagem e registros técnicos
 
-O site é servido pelo GitHub Pages, com cache de CDN (Fastly). Esses provedores podem registrar endereço IP, user-agent, URL pedida e horário, no nível necessário para operar a rede e conter abuso. Fontes do Google Fonts podem ser pedidas pelo navegador ao abrir as páginas.
+O site é servido pela Cloudflare (Workers Assets). Esse provedor pode registrar endereço IP, user-agent, URL pedida e horário, no nível necessário para operar a rede e conter abuso. A CDN pode gravar cookies técnicos de segurança (`__cf_bm` e similares). Fontes do Google Fonts podem ser pedidas pelo navegador ao abrir as páginas.
 
 ## Cookies e links externos
 
