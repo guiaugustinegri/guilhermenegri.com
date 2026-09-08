@@ -78,14 +78,14 @@ export function preferredType(header, produces) {
 
 export function appendVaryAccept(headers) {
   const existing = headers.get("vary");
+  const needed = ["Accept", "Accept-Encoding"];
   if (!existing) {
-    headers.set("Vary", "Accept");
+    headers.set("Vary", needed.join(", "));
     return;
   }
   const tokens = existing.split(",").map((s) => s.trim().toLowerCase());
-  if (!tokens.includes("accept")) {
-    headers.set("Vary", `${existing}, Accept`);
-  }
+  const extra = needed.filter((name) => !tokens.includes(name.toLowerCase()));
+  headers.set("Vary", extra.length ? `${existing}, ${extra.join(", ")}` : existing);
 }
 
 export function markdownCandidates(pathname) {

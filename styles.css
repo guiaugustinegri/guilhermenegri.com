@@ -2578,6 +2578,10 @@ body {
     margin: 1rem 0 1.5rem;
 }
 
+#agent-404 {
+    margin-top: 1rem;
+}
+
 .agent-recovery-md {
     display: block;
     white-space: pre-wrap;

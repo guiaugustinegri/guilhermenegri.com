@@ -271,11 +271,13 @@ test("Accept parser matches acceptmarkdown.com vectors", () => {
   );
 });
 
-test("canonical URL serves markdown with Vary: Accept", async () => {
+test("canonical URL serves markdown with Vary: Accept, Accept-Encoding", async () => {
   const res = await siteRequest("/", { Accept: "text/markdown" });
   assert.equal(res.status, 200);
   assert.match(res.headers.get("content-type"), /text\/markdown/);
-  assert.match(res.headers.get("vary"), /Accept/i);
+  const vary = res.headers.get("vary") || "";
+  assert.match(vary, /Accept/i);
+  assert.match(vary, /Accept-Encoding/i);
   const body = await res.text();
   assert.match(body, /^# Guilherme Negri/m);
 });

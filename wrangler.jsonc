@@ -1,14 +1,16 @@
 {
   "name": "guilhermenegri-com",
   "main": "src/worker.js",
-  "compatibility_date": "2026-04-18",
-  "assets": {
-    "directory": ".",
-    "binding": "ASSETS",
-    // Worker sees every request — required for Accept negotiation.
-    // https://acceptmarkdown.com/recipes/cloudflare-workers
-    "run_worker_first": ["*"],
-    "not_found_handling": "404-page",
-    "html_handling": "auto-trailing-slash"
-  }
+  "compatibility_date": "2026-09-07",
+  "workers_dev": true,
+  "preview_urls": true,
+  "vars": {
+    "ORIGIN": "https://guilhermenegri.com"
+  },
+  "routes": [
+    {
+      "pattern": "guilhermenegri.com.br",
+      "custom_domain": true
+    }
+  ]
 }

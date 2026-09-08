@@ -8,6 +8,7 @@ sobre-guilherme.md
 
 # Diretórios comuns
 node_modules/
+.wrangler/
 .DS_Store
 Thumbs.db
 

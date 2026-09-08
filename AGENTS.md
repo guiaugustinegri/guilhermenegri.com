@@ -2,16 +2,17 @@
 
 Site pessoal do Guilherme Negri. HTML/CSS/JS puro, sem framework e sem build.
 
-## Hospedagem e deploy (nada de Cloudflare aqui)
+## Hospedagem e deploy
 
 - **GitHub Pages**, repo `guiaugustinegri/guilhermenegri.com`. **Push na
   `master` publica sozinho** (o build do Pages leva 1 a 2 min). Não tem CI nem
   build local: `index.html` + `styles.css` + `script.js` são servidos como estão.
-- Domínio custom via arquivo `CNAME` (`guilhermenegri.com`).
-- **DNS na GoDaddy** (`ns71/ns72.domaincontrol.com`), registros A apontando pros
-  IPs do GitHub Pages (`185.199.108.153` a `185.199.111.153`). O domínio **não
-  passa pelo Cloudflare**. Quem está no Cloudflare é o `tracao.online` e as
-  landings do livro (Worker `tracao-site`, contexto em `..\AGENTS.md`).
+- Domínio canônico: `guilhermenegri.com` via arquivo `CNAME`. **DNS na GoDaddy**
+  (`ns71/ns72.domaincontrol.com`), registros A para os IPs do GitHub Pages
+  (`185.199.108.153` a `185.199.111.153`). O `.com` **não** passa pelo Cloudflare.
+- `guilhermenegri.com.br` é zona Cloudflare (NS `alberto`/`mckenzie.ns.cloudflare.com`).
+  O Worker `guilhermenegri-com` (`src/worker.js`) é Custom Domain nesse host e faz
+  proxy de `https://guilhermenegri.com`. Arquivos continuam no GitHub Pages.
 - Todo arquivo commitado vira URL pública (ex.: `guilhermenegri.com/README.md`).
 
 ## Links que têm dono (não "corrigir" sem contexto)
@@ -33,9 +34,9 @@ Site pessoal do Guilherme Negri. HTML/CSS/JS puro, sem framework e sem build.
   `/sitemap.xml`, `/robots.txt`, `/404.html` (GitHub Pages devolve HTTP 404)
   e `/404.md`.
 - Negociação `Accept: text/markdown` (acceptmarkdown.com) não roda no GitHub
-  Pages. O Worker em `src/worker.js` cobre o protocolo (`Vary: Accept`) e só
-  entra no ar se o domínio passar a ser servido por Cloudflare Workers Assets.
-  Até lá, use os gêmeos `.md` e o `rel="alternate"`.
+  Pages. No `.com.br` o Worker devolve markdown + `Vary: Accept, Accept-Encoding`
+  e 404 em `text/markdown`. Deploy: `npx wrangler deploy` (Custom Domain no
+  `wrangler.jsonc`). Não recrie A/CNAME na raiz da zona — o Wrangler gerencia.
 
 ## Visual
 
