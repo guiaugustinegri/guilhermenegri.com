@@ -171,31 +171,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 250);
     });
 
-    // Animação de digitação para o título principal (efeito especial)
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        // digita dentro do link, para o nome continuar levando à Tração; reserva a altura para o topo não pular
-        const alvoDigitacao = heroTitle.querySelector('a') || heroTitle;
-        const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const originalText = alvoDigitacao.textContent;
-        heroTitle.style.minHeight = heroTitle.offsetHeight + 'px';
-        if (!semMovimento) alvoDigitacao.textContent = '';
-        heroTitle.style.opacity = '1';
-        
-        let charIndex = 0;
-        const typeSpeed = 100;
-        
-        function typeWriter() {
-            if (charIndex < originalText.length) {
-                alvoDigitacao.textContent += originalText.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeWriter, typeSpeed);
-            }
-        }
-        
-        // Iniciar a animação após um pequeno delay
-        if (!semMovimento) setTimeout(typeWriter, 300);
-    }
     
     // Cursor personalizado para elementos interativos
     const interactiveElements = document.querySelectorAll('.nav-link, .cta-button, .contact-button, .ebook-link, .blog-link, .oferta-card, .pilar-card');

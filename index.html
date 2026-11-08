@@ -23,11 +23,11 @@
     <meta property="twitter:description" content="Ajudo startups a validar produtos e construir crescimento previsível da primeira venda ao scale-up. Mais de 240 empresas atendidas.">
     <meta property="twitter:image" content="https://guilhermenegri.com/image/guilherme-negri-especialista-crescimento-startups.png">
     <link rel="preload" as="image" href="image/guilherme-negri-especialista-crescimento-startups.webp" fetchpriority="high">
-    <link rel="stylesheet" href="styles.css?v=20261108">
+    <link rel="stylesheet" href="styles.css?v=20261108d">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
     <link rel="icon" type="image/png" href="image/favicon-guilherme-negri.png">
     <link rel="me" href="https://guilherme-negri.medium.com/">
 
@@ -178,6 +178,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="nav-overlay"></div>
 
     <!-- Seção de Abertura (Herói) -->
+    <main>
     <section id="hero" class="hero-section">
         <div class="hero-video-bg">
             <video autoplay muted loop playsinline preload="none" class="hero-video" poster="image/guilherme-negri-especialista-crescimento-startups.webp">
@@ -190,7 +191,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title"><a href="https://www.tracao.online/" target="_blank" class="hero-title-link">Guilherme Negri</a></h1>
+                    <h1 class="hero-title"><a href="https://www.tracao.online/" target="_blank" class="hero-title-link"><span class="linha">Guilherme</span> <span class="linha">Negri</span></a></h1>
                     <h2 class="hero-subtitle">Especialista em Crescimento de Startups</h2>
                     <p class="hero-bio">
                         Ajudo <strong>startups</strong> a validar produtos e construir crescimento previsível da primeira venda ao scale-up. Mais de <strong>240 empresas</strong> atendidas.
@@ -215,10 +216,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Seção Como Posso Ajudar -->
     <section id="ofertas" class="section ofertas-section">
         <div class="container">
-            <h2 class="section-title">Atuação</h2>
+            <h2 class="section-title verde">Atuação</h2>
 
             <div class="ofertas-grid">
                 <div class="oferta-card">
+                    <img class="oferta-ilustracao" src="image/atuacao-validacao.webp" width="240" height="240" loading="lazy" decoding="async" alt="Ilustração de um fundador e um cliente conversando à mesa sobre um protótipo desenhado em papel">
                     <h3 class="oferta-title">Validação de Negócios</h3>
                     <p class="oferta-description">
                         Para startups e empresas inovadoras que estão validando seu negócio, eu ajudo a validar o modelo de negócios, buscar a aderência com o mercado (problem-solution fit) e adquirir os primeiros usuários.
@@ -226,6 +228,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
 
                 <div class="oferta-card">
+                    <img class="oferta-ilustracao" src="image/atuacao-maquina.webp" width="240" height="240" loading="lazy" decoding="async" alt="Ilustração de uma máquina de engrenagens movida a manivela, com uma engrenagem sendo ajustada">
                     <h3 class="oferta-title">Construção da Máquina de Crescimento</h3>
                     <p class="oferta-description">
                         Para startups que já iniciaram aderência de mercado, eu ajudo a estruturar máquinas de crescimento, testando canais de tração e encontrando o caminho da repetibilidade e da escala sustentável.
@@ -240,7 +243,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="container">
             <div class="sobre-content">
                 <div class="sobre-text">
-                    <h2 class="section-title">Minha Jornada</h2>
+                    <h2 class="section-title">Minha <span class="verde">Jornada</span></h2>
 
                     <div class="sobre-paragraph">
                         <h3 class="paragraph-title">O Empreendedor na Prática</h3>
@@ -282,14 +285,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Seção Meu Método: O Growth Path -->
     <section id="metodo" class="section metodo-section">
         <div class="container">
-            <h2 class="section-title">O Método Growth Path</h2>
+            <h2 class="section-title">O Método <span class="verde">Growth Path</span></h2>
 
             <div class="metodo-content">
-                <div class="metodo-image">
-                    <picture>
-                        <source srcset="image/growth-path.webp" type="image/webp">
-                        <img src="image/growth-path.webp" alt="Infográfico da metodologia Growth Path - sistema de diagnóstico para crescimento de startups através de experimentação disciplinada" class="growth-path-image" loading="lazy">
-                    </picture>
+                <div class="growth-path">
+                    <div class="gp-trilho" aria-hidden="true"><span>Mercado</span><i></i><span>Produto</span></div>
+                    <ol class="gp-lista">
+                        <li class="gp-item">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="14" r="6"/><path d="M7 39c0-9 4-14 11-14s11 5 11 14"/><circle cx="34" cy="17" r="5"/><path d="M33 27c6 0 9 4 9 12"/></svg>
+                            <strong>Persona</strong>
+                            <span>Dor e momento</span>
+                        </li>
+                        <li class="gp-item">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="3.5"/><path d="M15 33a13 13 0 0 1 0-18M33 15a13 13 0 0 1 0 18M9 39a21 21 0 0 1 0-30M39 9a21 21 0 0 1 0 30"/></svg>
+                            <strong>Canais de tração</strong>
+                            <span>Onde as pessoas estão</span>
+                        </li>
+                        <li class="gp-item">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24s7-13 20-13 20 13 20 13-7 13-20 13S4 24 4 24z"/><circle cx="24" cy="24" r="6"/></svg>
+                            <strong>Imprimir</strong>
+                            <span>Volume = mercado acessível</span>
+                        </li>
+                        <li class="gp-item">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40S6 29 6 17a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 23-18 23z"/></svg>
+                            <strong>Engajar</strong>
+                            <span>Engajamento + validação da dor</span>
+                        </li>
+                        <li class="gp-item">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 9h26v18H16l-8 7v-7H6z"/><path d="M37 17h5v16h-4v7l-7-7H20"/></svg>
+                            <strong>Converter</strong>
+                            <span>Qualificação de persona, dor e momento</span>
+                        </li>
+                        <li class="gp-item">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M15 24l7 7 12-14"/></svg>
+                            <strong>Fechar</strong>
+                            <span>Capacidade de vender</span>
+                        </li>
+                        <li class="gp-item gp-destaque">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M40 20a17 17 0 0 0-31-5M8 7v8h8M8 28a17 17 0 0 0 31 5M40 41v-8h-8"/></svg>
+                            <strong>Retenção</strong>
+                            <span>% de churn</span>
+                        </li>
+                    </ol>
+                    <p class="gp-metricas">Em cada etapa: custo, volume e tempo</p>
                 </div>
 
                 <div class="metodo-text">
@@ -350,7 +388,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Seção de Prova Social -->
     <section id="prova-social" class="section prova-social-section">
         <div class="container">
-            <h2 class="section-title">Resultados Reais para Empresas como:</h2>
+            <h2 class="section-title">Resultados <span class="verde">Reais</span> para Empresas como:</h2>
             <div class="logos-grid">
                 <!-- Primeira linha -->
                 <div class="logo-item">
@@ -423,57 +461,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <!-- Depoimentos Modernos -->
             <div class="testimonials-modern">
-                <!-- Depoimento Principal -->
-                <div class="testimonial-main">
-                    <div class="testimonial-content">
-                        <blockquote class="testimonial-text">
-                            "Guilherme é, sem dúvidas, um dos profissionais de marketing mais completos que já conheci. Ele é muito analítico, totalmente orientado a dados... consegue com precisão entender a estratégia da empresa e converter em ações que trazem resultados efetivos."
-                        </blockquote>
-                        <div class="testimonial-meta">
-                            <div class="author-info">
-                                <img src="image/braga-160.webp" width="160" height="160" loading="lazy" decoding="async" alt="Roberto Braga, Growth Lead da bxblue e ex-startup Y Combinator vendida para PicPay" class="author-avatar-main">
-                                <p class="author-name"><strong>Roberto Braga</strong></p>
-                                <p class="author-role"><strong>Growth Lead @ bxblue</strong></p>
-                                <p class="author-company"><strong>Startup Y Combinator, vendida para o PicPay</strong></p>
-                            </div>
+                <figure class="depoimento">
+                    <blockquote>Guilherme é, sem dúvidas, um dos profissionais de marketing mais completos que já conheci. Ele é muito analítico, totalmente orientado a dados... consegue com precisão entender a estratégia da empresa e converter em ações que trazem resultados efetivos.</blockquote>
+                    <figcaption>
+                        <img src="image/braga-160.webp" width="160" height="160" loading="lazy" decoding="async" alt="Roberto Braga, Growth Lead da bxblue e ex-startup Y Combinator vendida para PicPay">
+                        <div>
+                            <strong>Roberto Braga</strong>
+                            <span>Growth Lead @ bxblue</span>
+                            <small>Startup Y Combinator, vendida para o PicPay</small>
                         </div>
-                    </div>
-                    <div class="testimonial-bg-pattern"></div>
-                </div>
-
-                <!-- Grid de Depoimentos -->
-                <div class="testimonials-grid">
-                    <div class="testimonial-card-modern">
-                        <div class="card-header">
-                            <img src="image/edu-160.webp" width="160" height="160" loading="lazy" decoding="async" alt="Eduardo Penna, CEO da Entrega Delivery - startup vendida para iFood" class="author-avatar">
+                    </figcaption>
+                </figure>
+                <figure class="depoimento">
+                    <blockquote>Excelente profissional. Compreende facilmente as necessidades do cliente, mesmo quando não são passadas com clareza, e interage com ideias para o projeto desde a sua concepção.</blockquote>
+                    <figcaption>
+                        <img src="image/edu-160.webp" width="160" height="160" loading="lazy" decoding="async" alt="Eduardo Penna, CEO da Entrega Delivery - startup vendida para iFood">
+                        <div>
+                            <strong>Eduardo Penna</strong>
+                            <span>CEO @ Entrega Delivery</span>
+                            <small>Startup vendida para o iFood</small>
                         </div>
-                        <blockquote class="card-quote">
-                            "Excelente profissional. Compreende facilmente as necessidades do cliente, mesmo quando não são passadas com clareza, e interage com ideias para o projeto desde a sua concepção."
-                        </blockquote>
-                        <div class="card-footer">
-                            <div class="author-details">
-                                <p class="author-name"><strong>Eduardo Penna</strong></p>
-                                <p><strong>CEO @ Entrega Delivery</strong><br><small><strong>Startup vendida para o iFood</strong></small></p>
-                            </div>
+                    </figcaption>
+                </figure>
+                <figure class="depoimento">
+                    <blockquote>O Guilherme demonstra uma pró-atividade e capacidade de execução de um empreendedor nato... Constatei a diferença que ele consegue fazer em qualquer equipe.</blockquote>
+                    <figcaption>
+                        <img src="image/horacio-160.webp" width="160" height="160" loading="lazy" decoding="async" alt="Horacio Poblete, 4x Founder e especialista em Inteligência Artificial">
+                        <div>
+                            <strong>Horacio Poblete</strong>
+                            <span>4x Founder &amp; AI Specialist</span>
                         </div>
-                    </div>
-
-                    <div class="testimonial-card-modern">
-                        <div class="card-header">
-                            <img src="image/horacio-160.webp" width="160" height="160" loading="lazy" decoding="async" alt="Horacio Poblete, 4x Founder e especialista em Inteligência Artificial" class="author-avatar">
-                        </div>
-                        <blockquote class="card-quote">
-                            "O Guilherme demonstra uma pró-atividade e capacidade de execução de um empreendedor nato... Constatei a diferença que ele consegue fazer em qualquer equipe."
-                        </blockquote>
-                        <div class="card-footer">
-                            <div class="author-details">
-                                <p class="author-name"><strong>Horacio Poblete</strong></p>
-                                <p><strong>4x Founder & AI Specialist</strong></p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                    </figcaption>
+                </figure>
             </div>
 
         </div>
@@ -482,96 +501,95 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Seção Blog -->
     <section id="blog" class="section blog-section">
         <div class="container">
-            <h2 class="section-title">Últimas Publicações</h2>
-            <p class="section-description">
-                Artigos sobre crescimento, estratégia e inovação no ecossistema empreendedor brasileiro.
-            </p>
+            <div class="blog-topo">
+                <div>
+                    <h2 class="section-title">Últimas <span class="verde">Publicações</span></h2>
+                    <p class="section-description">
+                        Artigos sobre crescimento, estratégia e inovação no ecossistema empreendedor brasileiro.
+                    </p>
+                </div>
+                <a href="https://blog.tracao.online/" class="blog-cta-button" target="_blank">Ver todas as publicações →</a>
+            </div>
             <div class="blog-grid">
                 <article class="blog-card">
-                    <a href="https://blog.tracao.online/como-fazer-pitch-startup-early-stage/" class="blog-image-link" target="_blank">
+                    <a href="https://blog.tracao.online/vendedor-como-insistir-sem-virar-spam/" class="blog-image-link" target="_blank">
                         <div class="blog-image">
-                            <img src="image/comunicacao.webp" width="640" height="360" loading="lazy" decoding="async" alt="Ilustração sobre comunicação e pitch para startups em estágio inicial - artigo de Guilherme Negri no blog da Tração.Online" class="blog-image-real">
+                            <img src="image/blog-vendedor-como-insistir-s.webp" width="640" height="427" loading="lazy" decoding="async" alt="Ilustração de uma porta entreaberta com uma mão batendo com firmeza mas educadamente" class="blog-image-real">
                         </div>
                     </a>
                     <div class="blog-content">
-                        <h3 class="blog-title">Comunicação e Pitch para Startups Early Stage</h3>
+                        <h3 class="blog-title">Vendedor: como insistir sem virar spam</h3>
                         <p class="blog-excerpt">
-                            Muitas ideias brilhantes acabam se perdendo ou não recebem o apoio necessário devido à incapacidade de serem claramente comunicadas. Um bom pitch pode
-                        </p>
-                        <div class="blog-meta">
-                            <span class="blog-read-time">7 min de leitura</span>
-                        </div>
-                        <a href="https://blog.tracao.online/como-fazer-pitch-startup-early-stage/" class="blog-link" target="_blank">
-                            Ler no blog →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <a href="https://blog.tracao.online/prospeccao-ativa-contatos-frios/" class="blog-image-link" target="_blank">
-                        <div class="blog-image">
-                            <img src="image/prospeccao.webp" width="640" height="360" loading="lazy" decoding="async" alt="Ilustração sobre prospecção ativa para aquisição de clientes - metodologia de Guilherme Negri" class="blog-image-real">
-                        </div>
-                    </a>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Prospecção Ativa</h3>
-                        <p class="blog-excerpt">
-                            Sabe quando você recebe uma mensagem no LinkedIn e a pessoa parece ter lido seus pensamentos? Ela fala exatamente do problema que você está enfrentand
-                        </p>
-                        <div class="blog-meta">
-                            <span class="blog-read-time">13 min de leitura</span>
-                        </div>
-                        <a href="https://blog.tracao.online/prospeccao-ativa-contatos-frios/" class="blog-link" target="_blank">
-                            Ler no blog →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <a href="https://blog.tracao.online/canal-comunidades-growth/" class="blog-image-link" target="_blank">
-                        <div class="blog-image">
-                            <img src="image/comunidades.webp" width="640" height="360" loading="lazy" decoding="async" alt="Ilustração sobre comunidades e como transformar clientes em fãs leais - estratégia de growth hacking" class="blog-image-real">
-                        </div>
-                    </a>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Comunidades: transformando clientes em fãs</h3>
-                        <p class="blog-excerpt">
-                            Há startups que crescem e parecem ter algo especial. Elas não têm apenas clientes, têm fãs. Já aconteceu de alguém insistir que você precisava experim
+                            Insistir com um lead sem virar spam: o playbook de 5 follow-ups com cadência, variação de canal e a hora certa de encerrar o ciclo.
                         </p>
                         <div class="blog-meta">
                             <span class="blog-read-time">9 min de leitura</span>
                         </div>
-                        <a href="https://blog.tracao.online/canal-comunidades-growth/" class="blog-link" target="_blank">
+                        <a href="https://blog.tracao.online/vendedor-como-insistir-sem-virar-spam/" class="blog-link" target="_blank">
                             Ler no blog →
                         </a>
                     </div>
                 </article>
 
                 <article class="blog-card">
-                    <a href="https://blog.tracao.online/funil-de-early-adopters-5-passos/" class="blog-image-link" target="_blank">
+                    <a href="https://blog.tracao.online/discovery-sem-frustracao-alinhe-entrega/" class="blog-image-link" target="_blank">
                         <div class="blog-image">
-                            <img src="image/funil.webp" width="640" height="360" loading="lazy" decoding="async" alt="Ilustração do funil de early adopters - guia de 5 passos para transformar interesse em receita" class="blog-image-real">
+                            <img src="image/blog-discovery-sem-frustracao.webp" width="640" height="427" loading="lazy" decoding="async" alt="Ilustração de dois projetos lado a lado: uma churrasqueira simples e um spa completo" class="blog-image-real">
                         </div>
                     </a>
                     <div class="blog-content">
-                        <h3 class="blog-title">Funil de Early Adopters: O Guia de 5 Passos para Transformar Interesse em Receita</h3>
+                        <h3 class="blog-title">Discovery sem frustração: alinhe a entrega antes da 1ª entrevista</h3>
                         <p class="blog-excerpt">
-                            O maior erro que fundadores cometem com seus primeiros usuários não é ter um produto incompleto. É não ter um processo. O resultado? Você atrai usuári
+                            Discovery bem-sucedido não é o que tem mais dados, é o que responde à pergunta de quem decide.
                         </p>
                         <div class="blog-meta">
-                            <span class="blog-read-time">11 min de leitura</span>
+                            <span class="blog-read-time">3 min de leitura</span>
                         </div>
-                        <a href="https://blog.tracao.online/funil-de-early-adopters-5-passos/" class="blog-link" target="_blank">
+                        <a href="https://blog.tracao.online/discovery-sem-frustracao-alinhe-entrega/" class="blog-link" target="_blank">
                             Ler no blog →
                         </a>
                     </div>
                 </article>
-            </div>
 
-            <div class="blog-cta">
-                <a href="https://blog.tracao.online/" class="blog-cta-button" target="_blank">
-                    Ver todas as publicações →
-                </a>
+                <article class="blog-card">
+                    <a href="https://blog.tracao.online/cliente-indicando-cliente-como-testar-o-referral-em-sua-startup/" class="blog-image-link" target="_blank">
+                        <div class="blog-image">
+                            <img src="image/blog-cliente-indicando-client.webp" width="640" height="427" loading="lazy" decoding="async" alt="Ilustração de dois balões de fala se sobrepondo, com a área em comum formando um coração" class="blog-image-real">
+                        </div>
+                    </a>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Cliente indicando cliente: como testar o referral em sua startup</h3>
+                        <p class="blog-excerpt">
+                            Referral é engenharia aplicada ao boca a boca. O framework VAR e as 4 fases pra testar indicação sem queimar meses.
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-read-time">17 min de leitura</span>
+                        </div>
+                        <a href="https://blog.tracao.online/cliente-indicando-cliente-como-testar-o-referral-em-sua-startup/" class="blog-link" target="_blank">
+                            Ler no blog →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <a href="https://blog.tracao.online/metricas-relativas-razoes/" class="blog-image-link" target="_blank">
+                        <div class="blog-image">
+                            <img src="image/blog-metricas-relativas-razoe.webp" width="640" height="427" loading="lazy" decoding="async" alt="Ilustração de uma fração gigante: um troféu como numerador e uma multidão como denominador" class="blog-image-real">
+                        </div>
+                    </a>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Métricas relativas: por que razões valem mais que números absolutos</h3>
+                        <p class="blog-excerpt">
+                            500 vendas podem ser 1% ou 25% de conversão. Veja por que boa métrica é uma razão e como fugir das métricas de vaidade.
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-read-time">7 min de leitura</span>
+                        </div>
+                        <a href="https://blog.tracao.online/metricas-relativas-razoes/" class="blog-link" target="_blank">
+                            Ler no blog →
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -581,7 +599,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section id="contato" class="section contato-section">
         <div class="container">
             <div class="section-content">
-                <h2 class="section-title">Vamos conversar?</h2>
+                <h2 class="section-title">Vamos <span class="verde">conversar?</span></h2>
                 <p class="section-text">
                     Se você lidera uma empresa de tecnologia e busca um caminho estruturado para o crescimento através de mentoria ou consultoria, minha experiência pode ajudar.
                 </p>
@@ -624,6 +642,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer class="footer-section">
         <div class="container">
             <div class="footer-content">
@@ -641,6 +661,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </footer>
 
-    <script src="script.js?v=20261108"></script>
+    <script src="script.js?v=20261108b"></script>
 </body>
 </html>
