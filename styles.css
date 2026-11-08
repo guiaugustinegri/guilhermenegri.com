@@ -2702,7 +2702,6 @@ body::after { content: ''; position: fixed; inset: 0; z-index: 900; pointer-even
 .hero-title, .section-title, .ebook-title { font-family: 'Raleway', 'Raleway Reserva', sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -0.01em; background: none; color: #fff; -webkit-text-fill-color: #fff; text-shadow: none; }
 .section-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.08; margin-bottom: 1.5rem; }
 .ebook-title { font-size: clamp(1.7rem, 2.8vw, 2.2rem) !important; }
-.section-title.verde { color: var(--verde); -webkit-text-fill-color: var(--verde); }
 .section-title::after, .section::before { display: none; }
 .section { background: var(--navy); border: 0; min-height: 0; padding: 72px 0; }
 
@@ -2750,8 +2749,12 @@ body::after { content: ''; position: fixed; inset: 0; z-index: 900; pointer-even
 
 /* Jornada */
 .paragraph-title { font-weight: 900; color: var(--verde); -webkit-text-fill-color: var(--verde); font-size: 1.3rem; }
-.paragraph-title::after, .sobre-paragraph::before, .sobre-profile-image::before { display: none; }
-.sobre-paragraph { border: 0; padding-left: 0; }
+.paragraph-title::after, .sobre-profile-image::before { display: none; }
+/* Jornada como linha do tempo discreta */
+.sobre-paragraph { position: relative; border: 0; border-left: 2px solid var(--fio); padding: 0 0 0.4rem 22px; margin-bottom: 0.6rem; }
+.sobre-paragraph::before { content: ''; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--verde); box-shadow: 0 0 0 4px var(--navy); opacity: 1; transform: none; }
+.sobre-mais { display: inline-block; margin: 0.4rem 0 0 24px; color: var(--verde); font-weight: 800; font-size: 0.95rem; text-decoration: none; }
+.sobre-mais:hover { color: var(--yellow-pastel); }
 .sobre-profile-image, .ebook-cover-image { border-radius: 6px; box-shadow: none; border: 0; }
 .sobre-profile-image:hover { transform: none; box-shadow: none; }
 
@@ -2823,6 +2826,34 @@ body::after { content: ''; position: fixed; inset: 0; z-index: 900; pointer-even
 .footer-section { background: var(--navy); border: 0; }
 .footer-text .footer-link, .footer-disclaimer .footer-link { text-decoration: underline; }
 
+/* Toques finais (08/11/2026) */
+/* Rabisco à mão embaixo da palavra em verde, como nos reels */
+.section-title .verde {
+    display: inline-block; padding-bottom: 0.14em;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9C38 3 76 12 118 6s66-3 79 2' fill='none' stroke='%23c79a3c' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat 0 100% / 100% 0.26em;
+    transition: background-size 0.6s 0.3s ease-out;
+}
+.section:not(.animate-in) .section-title .verde { background-size: 0 0.26em; }
+
+/* Livro sob a luz quente das ilustrações */
+.ebook-image { position: relative; }
+.ebook-image::before { content: ''; position: absolute; inset: -12% -8%; background: radial-gradient(closest-side, rgba(199, 154, 60, 0.34), rgba(199, 154, 60, 0)); pointer-events: none; }
+.ebook-cover-image { position: relative; }
+
+/* Fecho em painel verde */
+.contato-section .section-content { max-width: 900px; padding: 48px 32px; background: var(--verde); border-radius: 14px; color: var(--navy); }
+.contato-section .section-title, .contato-section .section-title .verde { color: var(--navy); -webkit-text-fill-color: var(--navy); }
+.contato-section .section-title .verde { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9C38 3 76 12 118 6s66-3 79 2' fill='none' stroke='%23000016' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.contato-section .section-text { color: var(--navy); font-size: 1.1rem; font-weight: 600; line-height: 1.55; max-width: 620px; margin-bottom: 1.2rem; }
+.contato-section .section-text strong { color: var(--navy); -webkit-text-fill-color: var(--navy); background: none; font-weight: 900; }
+.contact-email, .contato-section .contact-email { color: var(--navy); -webkit-text-fill-color: var(--navy); font-size: clamp(1.15rem, 2.4vw, 1.5rem); text-decoration: underline; text-underline-offset: 4px; }
+.inner-page .contact-email { color: var(--verde); -webkit-text-fill-color: var(--verde); }
+.contato-section .social-link { background: var(--navy); border: 0; color: #fff; box-shadow: none; width: 44px; height: 44px; }
+
+/* Na tela estreita nada passa da largura */
+.section > .container { width: 100%; min-width: 0; }
+.social-links { flex-wrap: wrap; }
+
 @media (max-width: 1024px) {
     .gp-lista { grid-template-columns: repeat(4, 1fr); }
     .testimonials-modern { grid-template-columns: 1fr; }
@@ -2849,13 +2880,23 @@ body::after { content: ''; position: fixed; inset: 0; z-index: 900; pointer-even
     .blog-excerpt, .blog-link { display: none; }
     .blog-title { font-size: 0.98rem; margin: 0; }
     .depoimento { padding: 20px; }
+    .contato-section .section-content { padding: 32px 18px; }
+    .ofertas-grid { padding: 0; margin-left: 0; margin-right: 0; }
+    .logos-grid { grid-template-columns: repeat(4, 1fr); gap: 6px 10px; margin-left: 0; margin-right: 0; padding: 0; }
+    .logo-item { height: 52px; padding: 2px; }
+    .company-logo { max-width: 100%; max-height: 30px; }
     .gp-destaque { grid-column: 1 / -1; }
     .section { padding: 52px 0; }
     .oferta-card { grid-template-columns: 84px 1fr; column-gap: 14px; padding: 16px; }
     .oferta-ilustracao { width: 84px; height: 84px; }
 }
+@media (max-width: 345px) {
+    .hero-acoes { flex-wrap: wrap; }
+    .hero-cta { flex: 1 1 100%; }
+}
 @media (prefers-reduced-motion: reduce) {
     .hero-title .linha, .hero-bio strong { animation: none; }
-    .section .highlight-orange { transition: none; }
+    .section .highlight-orange, .section-title .verde { transition: none; }
+    .section:not(.animate-in) .section-title .verde { background-size: 100% 0.26em; }
     .section:not(.animate-in) .highlight-orange { background-size: 100% 100%; }
 }
