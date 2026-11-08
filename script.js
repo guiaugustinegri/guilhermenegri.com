@@ -174,8 +174,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Animação de digitação para o título principal (efeito especial)
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        heroTitle.textContent = '';
+        // digita dentro do link, para o nome continuar levando à Tração; reserva a altura para o topo não pular
+        const alvoDigitacao = heroTitle.querySelector('a') || heroTitle;
+        const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const originalText = alvoDigitacao.textContent;
+        heroTitle.style.minHeight = heroTitle.offsetHeight + 'px';
+        if (!semMovimento) alvoDigitacao.textContent = '';
         heroTitle.style.opacity = '1';
         
         let charIndex = 0;
@@ -183,14 +187,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
         function typeWriter() {
             if (charIndex < originalText.length) {
-                heroTitle.textContent += originalText.charAt(charIndex);
+                alvoDigitacao.textContent += originalText.charAt(charIndex);
                 charIndex++;
                 setTimeout(typeWriter, typeSpeed);
             }
         }
         
         // Iniciar a animação após um pequeno delay
-        setTimeout(typeWriter, 800);
+        if (!semMovimento) setTimeout(typeWriter, 300);
     }
     
     // Cursor personalizado para elementos interativos
@@ -207,3 +211,15 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.cursor = 'default';
         });
     });
+
+// Vídeo do topo só depois da página carregar: a foto (poster) aparece primeiro e o vídeo não disputa a banda com ela
+window.addEventListener('load', function() {
+    const video = document.querySelector('.hero-video');
+    const fonte = video && video.querySelector('source[data-src]');
+    const economia = navigator.connection && navigator.connection.saveData;
+    if (!fonte || economia || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    fonte.src = fonte.dataset.src;
+    video.load();
+    const tocando = video.play();
+    if (tocando && tocando.catch) tocando.catch(function() {});
+});

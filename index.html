@@ -22,11 +22,13 @@
     <meta property="twitter:title" content="Guilherme Negri – Especialista em Crescimento de Startups">
     <meta property="twitter:description" content="Ajudo startups a validar produtos e construir crescimento previsível da primeira venda ao scale-up. Mais de 240 empresas atendidas.">
     <meta property="twitter:image" content="https://guilhermenegri.com/image/guilherme-negri-especialista-crescimento-startups.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" as="image" href="image/guilherme-negri-especialista-crescimento-startups.webp" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css?v=20261108">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="image/guilherme-negri-especialista-crescimento-startups.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="icon" type="image/png" href="image/favicon-guilherme-negri.png">
     <link rel="me" href="https://guilherme-negri.medium.com/">
 
     <!-- Schema.org Person and Book Markup -->
@@ -178,10 +180,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Seção de Abertura (Herói) -->
     <section id="hero" class="hero-section">
         <div class="hero-video-bg">
-            <video autoplay muted loop playsinline class="hero-video" poster="image/guilherme-negri-especialista-crescimento-startups.png">
-                <source src="image/guilherme-negri.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline preload="none" class="hero-video" poster="image/guilherme-negri-especialista-crescimento-startups.webp">
+                <source data-src="image/guilherme-negri-hero.mp4" type="video/mp4">
                 <!-- Fallback para navegadores que não suportam vídeo -->
-                <img src="image/guilherme-negri-especialista-crescimento-startups.png" alt="Retrato profissional de Guilherme Negri, especialista em crescimento de startups e fundador da Tração.Online" class="fallback-image">
+                <img src="image/guilherme-negri-especialista-crescimento-startups.webp" alt="Retrato profissional de Guilherme Negri, especialista em crescimento de startups e fundador da Tração.Online" class="fallback-image">
             </video>
             <div class="video-overlay"></div>
         </div>
@@ -193,6 +195,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <p class="hero-bio">
                         Ajudo <strong>startups</strong> a validar produtos e construir crescimento previsível da primeira venda ao scale-up. Mais de <strong>240 empresas</strong> atendidas.
                     </p>
+                    <div class="hero-acoes">
+                        <a href="#contato" class="hero-cta">Vamos conversar</a>
+                        <a href="#ebook" class="hero-cta hero-cta-secundario">Conhecer o livro</a>
+                    </div>
+                    <ul class="hero-logos" aria-label="Algumas empresas atendidas">
+                        <li><img src="image/logo-vtex.png" alt="VTEX" width="69" height="25" decoding="async"></li>
+                        <li><img src="image/logo-unilever.png" alt="Unilever" width="38" height="41" decoding="async"></li>
+                        <li><img src="image/logo-omo.png" alt="OMO" width="63" height="36" decoding="async"></li>
+                        <li><img src="image/logo-bxblue.png" alt="bxblue" width="61" height="17" decoding="async"></li>
+                        <li><img src="image/logo-solides.png" alt="Sólides" width="83" height="20" decoding="async"></li>
+                        <li><img src="image/logo-leadlovers.png" alt="Leadlovers" width="98" height="20" decoding="async"></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -207,7 +221,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="oferta-card">
                     <h3 class="oferta-title">Validação de Negócios</h3>
                     <p class="oferta-description">
-                        Para startups e empresas inovadoras que estão validando seu negócio, eu ajudo a validar o modelo de negócios, buscar a aderência com o mercado (problem solution-fit) e adquirir os primeiros usuários.
+                        Para startups e empresas inovadoras que estão validando seu negócio, eu ajudo a validar o modelo de negócios, buscar a aderência com o mercado (problem-solution fit) e adquirir os primeiros usuários.
                     </p>
                 </div>
 
@@ -259,7 +273,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
 
                 <div class="sobre-image">
-                    <img src="image/guilherme-negri-especialista-crescimento-startups.png" alt="Foto profissional de Guilherme Negri, especialista em crescimento de startups e fundador da Tração.Online" class="sobre-profile-image">
+                    <img src="image/guilherme-negri-especialista-crescimento-startups.webp" width="1024" height="1024" alt="Foto profissional de Guilherme Negri, especialista em crescimento de startups e fundador da Tração.Online" class="sobre-profile-image" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -327,7 +341,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
 
                 <div class="ebook-image">
-                    <img src="image/livro-faca-coisas-nao-escalam-guia-validacao-startups.png" alt="Capa do livro 'Faça Coisas que Não Escalam' de Guilherme Negri - guia prático para validação de produtos e construção de product-market fit" class="ebook-cover-image">
+                    <img src="image/livro-faca-coisas-nao-escalam-guia-validacao-startups.webp" width="408" height="612" loading="lazy" decoding="async" alt="Capa do livro 'Faça Coisas que Não Escalam' de Guilherme Negri - guia prático para validação de produtos e construção de product-market fit" class="ebook-cover-image">
                 </div>
             </div>
         </div>
@@ -340,70 +354,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="logos-grid">
                 <!-- Primeira linha -->
                 <div class="logo-item">
-                    <img src="image/logo-vtex.png" alt="VTEX" class="company-logo">
+                    <img src="image/logo-vtex.png" alt="VTEX" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/timenow_p.png" alt="TimeNow" class="company-logo">
+                    <img src="image/timenow_p.png" alt="TimeNow" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-cotidiano.png" alt="Cotidiano" class="company-logo">
+                    <img src="image/logo-cotidiano.png" alt="Cotidiano" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-bxblue.png" alt="bxblue" class="company-logo">
+                    <img src="image/logo-bxblue.png" alt="bxblue" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-omo.png" alt="OMO" class="company-logo">
+                    <img src="image/logo-omo.png" alt="OMO" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-smartbot.png" alt="Smartbot" class="company-logo">
+                    <img src="image/logo-smartbot.png" alt="Smartbot" class="company-logo" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Segunda linha -->
                 <div class="logo-item">
-                    <img src="image/logo-docsales.png" alt="Docsales" class="company-logo">
+                    <img src="image/logo-docsales.png" alt="Docsales" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-gama.png" alt="Gama Academy" class="company-logo">
+                    <img src="image/logo-gama.png" alt="Gama Academy" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-objective.png" alt="Objective" class="company-logo">
+                    <img src="image/logo-objective.png" alt="Objective" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-ligaventures.png" alt="Liga Ventures" class="company-logo">
+                    <img src="image/logo-ligaventures.png" alt="Liga Ventures" class="company-logo" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Terceira linha -->
                 <div class="logo-item">
-                    <img src="image/fotoploc_p-1.png" alt="Fotoploc" class="company-logo">
+                    <img src="image/fotoploc_p-1.png" alt="Fotoploc" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-market4u.png" alt="Market4u" class="company-logo">
+                    <img src="image/logo-market4u.png" alt="Market4u" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-solides.png" alt="Solides" class="company-logo">
+                    <img src="image/logo-solides.png" alt="Solides" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-unilever.png" alt="Unilever" class="company-logo">
+                    <img src="image/logo-unilever.png" alt="Unilever" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-dataeasy.png" alt="Dataeasy" class="company-logo">
+                    <img src="image/logo-dataeasy.png" alt="Dataeasy" class="company-logo" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Quarta linha -->
                 <div class="logo-item">
-                    <img src="image/logo-leadlovers.png" alt="Leadlovers" class="company-logo">
+                    <img src="image/logo-leadlovers.png" alt="Leadlovers" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-baita.png" alt="Baita" class="company-logo">
+                    <img src="image/logo-baita.png" alt="Baita" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-niduu.png" alt="Niduu" class="company-logo">
+                    <img src="image/logo-niduu.png" alt="Niduu" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-configr.png" alt="Configr" class="company-logo">
+                    <img src="image/logo-configr.png" alt="Configr" class="company-logo" loading="lazy" decoding="async">
                 </div>
                 <div class="logo-item">
-                    <img src="image/logo-nexatlas.png" alt="Nexatlas" class="company-logo">
+                    <img src="image/logo-nexatlas.png" alt="Nexatlas" class="company-logo" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -417,7 +431,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </blockquote>
                         <div class="testimonial-meta">
                             <div class="author-info">
-                                <img src="image/braga.jpg" alt="Roberto Braga, Growth Lead da bxblue e ex-startup Y Combinator vendida para PicPay" class="author-avatar-main">
+                                <img src="image/braga-160.webp" width="160" height="160" loading="lazy" decoding="async" alt="Roberto Braga, Growth Lead da bxblue e ex-startup Y Combinator vendida para PicPay" class="author-avatar-main">
                                 <p class="author-name"><strong>Roberto Braga</strong></p>
                                 <p class="author-role"><strong>Growth Lead @ bxblue</strong></p>
                                 <p class="author-company"><strong>Startup Y Combinator, vendida para o PicPay</strong></p>
@@ -431,7 +445,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="testimonials-grid">
                     <div class="testimonial-card-modern">
                         <div class="card-header">
-                            <img src="image/edu.jpg" alt="Eduardo Penna, CEO da Entrega Delivery - startup vendida para iFood" class="author-avatar">
+                            <img src="image/edu-160.webp" width="160" height="160" loading="lazy" decoding="async" alt="Eduardo Penna, CEO da Entrega Delivery - startup vendida para iFood" class="author-avatar">
                         </div>
                         <blockquote class="card-quote">
                             "Excelente profissional. Compreende facilmente as necessidades do cliente, mesmo quando não são passadas com clareza, e interage com ideias para o projeto desde a sua concepção."
@@ -446,7 +460,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <div class="testimonial-card-modern">
                         <div class="card-header">
-                            <img src="image/horacio.jpg" alt="Horacio Poblete, 4x Founder e especialista em Inteligência Artificial" class="author-avatar">
+                            <img src="image/horacio-160.webp" width="160" height="160" loading="lazy" decoding="async" alt="Horacio Poblete, 4x Founder e especialista em Inteligência Artificial" class="author-avatar">
                         </div>
                         <blockquote class="card-quote">
                             "O Guilherme demonstra uma pró-atividade e capacidade de execução de um empreendedor nato... Constatei a diferença que ele consegue fazer em qualquer equipe."
@@ -476,7 +490,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <article class="blog-card">
                     <a href="https://blog.tracao.online/como-fazer-pitch-startup-early-stage/" class="blog-image-link" target="_blank">
                         <div class="blog-image">
-                            <img src="image/comunicacao.jpg" alt="Ilustração sobre comunicação e pitch para startups em estágio inicial - artigo de Guilherme Negri no blog da Tração.Online" class="blog-image-real">
+                            <img src="image/comunicacao.webp" width="640" height="360" loading="lazy" decoding="async" alt="Ilustração sobre comunicação e pitch para startups em estágio inicial - artigo de Guilherme Negri no blog da Tração.Online" class="blog-image-real">
                         </div>
                     </a>
                     <div class="blog-content">
@@ -496,7 +510,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <article class="blog-card">
                     <a href="https://blog.tracao.online/prospeccao-ativa-contatos-frios/" class="blog-image-link" target="_blank">
                         <div class="blog-image">
-                            <img src="image/prospeccao.png" alt="Ilustração sobre prospecção ativa para aquisição de clientes - metodologia de Guilherme Negri" class="blog-image-real">
+                            <img src="image/prospeccao.webp" width="640" height="360" loading="lazy" decoding="async" alt="Ilustração sobre prospecção ativa para aquisição de clientes - metodologia de Guilherme Negri" class="blog-image-real">
                         </div>
                     </a>
                     <div class="blog-content">
@@ -516,7 +530,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <article class="blog-card">
                     <a href="https://blog.tracao.online/canal-comunidades-growth/" class="blog-image-link" target="_blank">
                         <div class="blog-image">
-                            <img src="image/comunidades.png" alt="Ilustração sobre comunidades e como transformar clientes em fãs leais - estratégia de growth hacking" class="blog-image-real">
+                            <img src="image/comunidades.webp" width="640" height="360" loading="lazy" decoding="async" alt="Ilustração sobre comunidades e como transformar clientes em fãs leais - estratégia de growth hacking" class="blog-image-real">
                         </div>
                     </a>
                     <div class="blog-content">
@@ -536,7 +550,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <article class="blog-card">
                     <a href="https://blog.tracao.online/funil-de-early-adopters-5-passos/" class="blog-image-link" target="_blank">
                         <div class="blog-image">
-                            <img src="image/funil.jpg" alt="Ilustração do funil de early adopters - guia de 5 passos para transformar interesse em receita" class="blog-image-real">
+                            <img src="image/funil.webp" width="640" height="360" loading="lazy" decoding="async" alt="Ilustração do funil de early adopters - guia de 5 passos para transformar interesse em receita" class="blog-image-real">
                         </div>
                     </a>
                     <div class="blog-content">
@@ -573,7 +587,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </p>
 
                 <div class="contact-info">
-                    <div class="contact-email">guilherme@tracao.online</div>
+                    <a href="mailto:guilherme@tracao.online" class="contact-email">guilherme@tracao.online</a>
                     <div class="social-links">
                         <a href="https://linkedin.com/in/guilhermeaugustinegri" class="social-link linkedin" target="_blank" aria-label="LinkedIn">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -601,7 +615,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </svg>
                         </a>
                         <a href="https://www.tracao.online/" class="social-link tracao" target="_blank" aria-label="Tração.Online">
-                            <img src="image/tracao-online-logo-icone.png.png" alt="Tração.Online" class="social-icon-image">
+                            <img src="image/tracao-online-logo-icone-64.webp" width="64" height="64" loading="lazy" decoding="async" alt="Tração.Online" class="social-icon-image">
                         </a>
                     </div>
                 </div>
@@ -627,6 +641,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20261108"></script>
 </body>
 </html>

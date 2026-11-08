@@ -287,6 +287,7 @@ body {
     --orange-vibrant: #FA813C; /* Laranja vibrante para CTAs */
     
     /* Cores principais (compatibilidade) */
+    --accent-text: #dc93a3; /* Tom claro do rosado, para texto sobre fundo escuro (contraste acima de 5) */
     --accent-primary: #853464; /* Roxo escuro */
     --accent-secondary: #9C5171; /* Roxo médio */
     --accent-tertiary: #BE6577; /* Rosado avermelhado */
@@ -433,7 +434,7 @@ body {
 
 .cta-text {
     font-size: 1.2rem;
-    color: var(--accent-primary);
+    color: var(--accent-text);
     font-weight: 600;
     margin-top: 2rem;
     text-align: center;
@@ -505,7 +506,7 @@ body {
 }
 
 .social-link:hover {
-    color: var(--accent-primary);
+    color: var(--accent-text);
     background: var(--glow-accent);
     border-color: var(--accent-primary);
     transform: translateY(-3px) scale(1.1);
@@ -646,13 +647,13 @@ body {
 }
 
 .section-text strong {
-    color: var(--accent-primary);
+    color: var(--accent-text);
     font-weight: 600;
 }
 
 /* Links das seções */
 .section-link {
-    color: var(--accent-primary);
+    color: var(--accent-text);
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
@@ -757,7 +758,7 @@ body {
 
 .quote-icon {
     font-size: 4rem;
-    color: var(--accent-secondary);
+    color: var(--accent-text);
     margin-bottom: 1rem;
     opacity: 0.8;
 }
@@ -792,7 +793,7 @@ body {
 
 .author-info h4,
 .author-info .author-name {
-    color: var(--accent-primary);
+    color: var(--accent-text);
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -931,7 +932,7 @@ body {
     left: 0;
     top: -5px;
     font-size: 2rem;
-    color: var(--accent-secondary);
+    color: var(--accent-text);
     opacity: 0.3;
 }
 
@@ -942,7 +943,7 @@ body {
 
 .author-details h5,
 .author-details .author-name {
-    color: var(--accent-primary);
+    color: var(--accent-text);
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
@@ -1050,7 +1051,7 @@ body {
 .paragraph-title {
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--accent-primary);
+    color: var(--accent-text);
     margin-bottom: 1rem;
     position: relative;
 }
@@ -1140,7 +1141,7 @@ body {
     content: '•';
     position: absolute;
     left: -1.5rem;
-    color: var(--accent-primary);
+    color: var(--accent-text);
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -1310,7 +1311,7 @@ body {
 }
 
 .oferta-link {
-    color: var(--accent-primary);
+    color: var(--accent-text);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -1388,7 +1389,7 @@ body {
 .metodo-subtitle {
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--accent-primary);
+    color: var(--accent-text);
     text-align: center;
     margin-bottom: 3rem;
 }
@@ -1463,7 +1464,7 @@ body {
 
 .philosophy-highlight {
     font-size: 1.1rem;
-    color: var(--accent-primary);
+    color: var(--accent-text);
     font-weight: 600;
     margin-top: 2rem;
     text-align: center;
@@ -1472,7 +1473,7 @@ body {
 
 .personal-highlight {
     font-size: 1.1rem;
-    color: var(--accent-primary);
+    color: var(--accent-text);
     font-weight: 600;
     margin-top: 2rem;
     text-align: center;
@@ -1619,7 +1620,7 @@ body {
 }
 
 .blog-link {
-    color: var(--accent-primary);
+    color: var(--accent-text);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -1640,7 +1641,7 @@ body {
 .blog-cta-button {
     display: inline-block;
     background-color: transparent;
-    color: var(--accent-primary);
+    color: var(--accent-text);
     padding: 16px 32px;
     text-decoration: none;
     border-radius: 8px;
@@ -1750,7 +1751,7 @@ body {
 .social-followers {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--accent-primary);
+    color: var(--accent-text);
 }
 
 .social-arrow {
@@ -1868,7 +1869,7 @@ body {
 }
 
 .contact-link {
-    color: var(--accent-primary);
+    color: var(--accent-text);
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
@@ -1885,14 +1886,14 @@ body {
 
     /* Tração Link Style */
     .tracao-link {
-        color: var(--accent-primary);
+        color: var(--accent-text);
         text-decoration: none;
         font-weight: 600;
         transition: all 0.3s ease;
     }
 
     .tracao-link:hover {
-        color: var(--accent-secondary);
+        color: var(--yellow-pastel);
         text-decoration: underline;
     }
 
@@ -2445,7 +2446,7 @@ body {
 }
 
 .footer-link {
-    color: var(--accent-primary);
+    color: var(--accent-text);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -2453,7 +2454,7 @@ body {
 }
 
 .footer-link:hover {
-    color: var(--accent-secondary);
+    color: var(--yellow-pastel);
     text-decoration: underline;
 }
 
@@ -2600,4 +2601,35 @@ body {
     .inner-page h1 {
         font-size: 1.9rem;
     }
+}
+
+/* Topo: botões e logos na primeira dobra (08/11/2026) */
+.hero-title-link { color: inherit; text-decoration: none; }
+.hero-acoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 2rem; }
+.hero-cta {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 10px;
+    background: var(--orange-vibrant);
+    border: 2px solid var(--orange-vibrant);
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.hero-cta:hover, .hero-cta:focus-visible { background: var(--yellow-pastel); border-color: var(--yellow-pastel); transform: translateY(-2px); }
+.hero-cta-secundario { background: rgba(28, 28, 28, 0.55); color: #fff; border-color: rgba(255, 255, 255, 0.7); }
+.hero-cta-secundario:hover, .hero-cta-secundario:focus-visible { color: var(--text-dark); }
+.hero-logos { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 28px; margin: 2rem auto 0; padding: 0; }
+.hero-logos li { display: flex; align-items: center; height: 28px; }
+.hero-logos img { height: auto; max-height: 28px; width: auto; opacity: 0.92; filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.6)); }
+.contato-section .contact-email { display: inline-block; background: none; -webkit-text-fill-color: currentColor; color: var(--yellow-pastel); text-decoration: none; text-shadow: none; }
+.contato-section .contact-email:hover { text-decoration: underline; }
+@media (max-width: 768px) {
+    .hero-cta { padding: 13px 22px; font-size: 1rem; }
+    .hero-acoes { margin-top: 1.5rem; }
+    .hero-logos { gap: 10px 20px; margin-top: 1.5rem; max-width: 320px; }
+    .hero-logos li { height: 24px; }
+    .hero-logos img { max-height: 24px; }
 }
