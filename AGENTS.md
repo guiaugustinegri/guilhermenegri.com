@@ -45,8 +45,8 @@ Site pessoal do Guilherme Negri. HTML/CSS/JS puro, sem framework e sem build.
   vale sobre as regras antigas acima dela.
 - Growth Path é HTML com pictogramas (`.growth-path` no `index.html`), adaptado do
   infográfico antigo: nome de etapa muda no texto.
-- Ilustrações em risografia só em Atuação (`image/atuacao-*.webp`), pequenas de
-  propósito: o site é para a pessoa entrar e confiar, não para explicar o método.
+- Atuação usa ícones simples em risografia (`image/icone-*.webp`, fundo transparente,
+  gerados pelo Codex): o site é para a pessoa entrar e confiar, não para explicar o método.
 - Ícones sociais são SVG inline pintados via `currentColor` (`.social-link` no
   `styles.css`): ícone novo não precisa de CSS próprio.
 

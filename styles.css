@@ -2742,8 +2742,8 @@ body::after { content: ''; position: fixed; inset: 0; z-index: 900; pointer-even
 .oferta-card { background: var(--navy-claro); border: 1px solid var(--fio); border-top: 3px solid var(--verde); border-radius: 6px; box-shadow: none; backdrop-filter: none; }
 .oferta-card::before { display: none; }
 .oferta-card:hover { transform: translateY(-4px); box-shadow: none; border-color: var(--verde); }
-.oferta-card { display: grid; grid-template-columns: 112px 1fr; column-gap: 18px; align-items: start; padding: 20px; overflow: hidden; text-align: left; }
-.oferta-ilustracao { grid-row: 1 / span 2; display: block; width: 112px; height: 112px; object-fit: cover; border-radius: 2px; }
+.oferta-card { display: grid; grid-template-columns: 68px 1fr; grid-template-rows: auto 1fr; column-gap: 18px; align-items: start; padding: 20px; overflow: hidden; text-align: left; }
+.oferta-ilustracao { grid-row: 1 / span 2; display: block; width: 68px; height: 68px; object-fit: contain; }
 .oferta-title { font-weight: 900; text-transform: uppercase; color: #fff; -webkit-text-fill-color: #fff; background: none; font-size: 1.05rem; line-height: 1.15; margin: 0 0 0.5rem; text-align: left; }
 .oferta-description { margin: 0; text-align: left; font-weight: 500; color: #d6daea; }
 
@@ -2887,8 +2887,8 @@ body::after { content: ''; position: fixed; inset: 0; z-index: 900; pointer-even
     .company-logo { max-width: 100%; max-height: 30px; }
     .gp-destaque { grid-column: 1 / -1; }
     .section { padding: 52px 0; }
-    .oferta-card { grid-template-columns: 84px 1fr; column-gap: 14px; padding: 16px; }
-    .oferta-ilustracao { width: 84px; height: 84px; }
+    .oferta-card { grid-template-columns: 56px 1fr; column-gap: 14px; padding: 16px; }
+    .oferta-ilustracao { width: 56px; height: 56px; }
 }
 @media (max-width: 345px) {
     .hero-acoes { flex-wrap: wrap; }
