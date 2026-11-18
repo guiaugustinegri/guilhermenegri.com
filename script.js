@@ -176,21 +176,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
-    // Cursor personalizado para elementos interativos
-    const interactiveElements = document.querySelectorAll('.nav-link, .cta-button, .contact-button, .ebook-link, .blog-link, .oferta-card, .pilar-card');
-    
-    interactiveElements.forEach(element => {
-        element.style.cursor = 'pointer';
-        
-        element.addEventListener('mouseenter', function() {
-            document.body.style.cursor = 'pointer';
-        });
-        
-        element.addEventListener('mouseleave', function() {
-            document.body.style.cursor = 'default';
-        });
-    });
-
 // Vídeo do topo só depois da página carregar: a foto (poster) aparece primeiro e o vídeo não disputa a banda com ela
 window.addEventListener('load', function() {
     const video = document.querySelector('.hero-video');
@@ -202,3 +187,30 @@ window.addEventListener('load', function() {
     const tocando = video.play();
     if (tocando && tocando.catch) tocando.catch(function() {});
 });
+
+// Refino (18/11/2026): barra de leitura no menu e luz que segue o mouse nos cartões
+(function() {
+    const barra = document.createElement('div');
+    barra.className = 'barra-leitura';
+    barra.setAttribute('aria-hidden', 'true');
+    const nav = document.querySelector('.main-nav');
+    if (nav) nav.appendChild(barra);
+    let pendente = false;
+    function atualiza() {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        barra.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+        if (nav) nav.classList.toggle('rolou', window.scrollY > 24);
+        pendente = false;
+    }
+    window.addEventListener('scroll', function() { if (!pendente) { pendente = true; requestAnimationFrame(atualiza); } }, { passive: true });
+    atualiza();
+
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    document.querySelectorAll('.oferta-card, .gp-item, .depoimento, .hero-cta, .ebook-link, .blog-cta-button').forEach(function(el) {
+        el.addEventListener('pointermove', function(e) {
+            const r = el.getBoundingClientRect();
+            el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+            el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        });
+    });
+})();
