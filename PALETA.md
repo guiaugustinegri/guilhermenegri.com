@@ -15,13 +15,14 @@ laranja) está no histórico do git.
 
 ## Tipografia
 
-Raleway em tudo. Títulos em 900, maiúsculas, com uma palavra em verde, como nas capas de reel.
+Raleway nos títulos (800 nos de seção, nome do topo em maiúsculas), com uma palavra em verde, como nas capas de reel.
+Inter no texto corrido, botões e menu (desde 18/11/2026).
 
 ## Regras
 
-- Destaque em texto é marca-texto verde com letra azul-noite, não brilho nem degradê.
-- Cantos discretos (6 a 10 px) e sem sombra. Cartão tem o fio verde em cima, como nos carrosséis.
+- Marca-texto verde com letra azul-noite só no topo. No corpo, ênfase é texto claro com fio verde fino embaixo.
+- Cantos discretos (4 a 12 px) e sem sombra. Bordas em fio branco a 8%. Cartão tem um traço verde curto em cima, como nos carrosséis.
 - Grão de risografia por cima da página (`image/grao.webp`).
-- Ícones simples com textura de risografia, sem texto na arte: um objeto só, poucas cores. Família `a` do setup do projeto no Gestor de Conteúdo.
+- Ícones de interface em traço fino verde (SVG). Risografia fica para as ilustrações do blog.
 - Movimento curto: o nome sobe e a faixa do marca-texto corre. Tudo respeita `prefers-reduced-motion`.
 - O vídeo do topo tem um selo no canto inferior direito. A ampliação em `.hero-video` existe para cortar esse selo.

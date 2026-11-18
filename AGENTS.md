@@ -45,8 +45,13 @@ Site pessoal do Guilherme Negri. HTML/CSS/JS puro, sem framework e sem build.
   vale sobre as regras antigas acima dela.
 - Growth Path é HTML com pictogramas (`.growth-path` no `index.html`), adaptado do
   infográfico antigo: nome de etapa muda no texto.
-- Atuação usa ícones simples em risografia (`image/icone-*.webp`, fundo transparente,
-  gerados pelo Codex): o site é para a pessoa entrar e confiar, não para explicar o método.
+- Desde 18/11/2026 há uma camada "Refino" no fim do `styles.css`, sobre a dos reels:
+  Raleway 700/800 nos títulos (sem tudo em maiúsculas), Inter no texto corrido,
+  sobretítulos numerados (`.eyebrow`), fios finos, logos monocromáticos. O Gui achou
+  a versão anterior "infantil"; não volte ao 900 em caixa-alta, ao rabisco nem ao
+  marca-texto espalhado pelo corpo.
+- Atuação usa ícones de traço fino em SVG inline (`.oferta-icone`), como os do Growth
+  Path. Os ícones em risografia (`image/icone-*.webp`) saíram da página em 18/11/2026.
 - Ícones sociais são SVG inline pintados via `currentColor` (`.social-link` no
   `styles.css`): ícone novo não precisa de CSS próprio.
 
