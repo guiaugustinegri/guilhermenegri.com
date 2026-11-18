@@ -21,8 +21,9 @@ Inter no texto corrido, botões e menu (desde 18/11/2026).
 ## Regras
 
 - Marca-texto verde com letra azul-noite só no topo. No corpo, ênfase é texto claro com fio verde fino embaixo.
-- Cantos discretos (4 a 12 px) e sem sombra. Bordas em fio branco a 8%. Cartão tem um traço verde curto em cima, como nos carrosséis.
+- Cantos discretos (4 a 12 px). Sombra só no botão principal (brilho verde contido). Bordas em fio branco a 8%. Cartão tem um traço verde curto em cima, como nos carrosséis.
 - Grão de risografia por cima da página (`image/grao.webp`).
 - Ícones de interface em traço fino verde (SVG). Risografia fica para as ilustrações do blog.
+- Texturas de fundo e fotos dos cartões geradas pelo Codex, em duotom azul-noite e verde, sempre discretas (máscara em degradê).
 - Movimento curto: o nome sobe e a faixa do marca-texto corre. Tudo respeita `prefers-reduced-motion`.
 - O vídeo do topo tem um selo no canto inferior direito. A ampliação em `.hero-video` existe para cortar esse selo.

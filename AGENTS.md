@@ -52,6 +52,12 @@ Site pessoal do Guilherme Negri. HTML/CSS/JS puro, sem framework e sem build.
   marca-texto espalhado pelo corpo.
 - Atuação usa ícones de traço fino em SVG inline (`.oferta-icone`), como os do Growth
   Path. Os ícones em risografia (`image/icone-*.webp`) saíram da página em 18/11/2026.
+- Camada "Refino 2" (18/11/2026), depois da "Refino": texturas e fotos geradas pelo
+  Codex (`image/textura-*.webp` e `image/atuacao-*.webp`; nunca pela API da OpenAI),
+  botão principal com volume e brilho no hover, luz que segue o mouse em botões e
+  cartões (`--mx`/`--my`, ligada no `script.js`), barra de leitura no menu e menu do
+  celular em lista editorial. Imagem nova segue o mesmo pedido: azul-noite #000016,
+  verde #00c79f com parcimônia, sem texto, grão fino.
 - Ícones sociais são SVG inline pintados via `currentColor` (`.social-link` no
   `styles.css`): ícone novo não precisa de CSS próprio.
 
