@@ -2900,3 +2900,322 @@ body::after { content: ''; position: fixed; inset: 0; z-index: 900; pointer-even
     .section:not(.animate-in) .section-title .verde { background-size: 100% 0.26em; }
     .section:not(.animate-in) .highlight-orange { background-size: 100% 100%; }
 }
+
+/* ==========================================================================
+   Refino (18/11/2026). Mesma identidade dos reels (azul-noite, verde, Raleway
+   nos títulos, foto da jaqueta), com acabamento mais adulto. Vale sobre tudo
+   acima.
+   ========================================================================== */
+
+/* Rodada 1: tipografia e hierarquia */
+:root {
+    --fonte-titulo: 'Raleway', 'Raleway Reserva', sans-serif;
+    --fonte-texto: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --texto: #c4c8d8;
+    --texto-forte: #f4f5fa;
+    --texto-suave: #8a90aa;
+}
+body, input, button, textarea { font-family: var(--fonte-texto); font-weight: 400; font-feature-settings: 'cv11', 'ss01'; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { color: var(--texto); font-size: 17px; line-height: 1.65; }
+p { color: var(--texto); }
+strong { color: var(--texto-forte); font-weight: 600; }
+
+/* Sobretítulo editorial: número fino + rótulo espaçado */
+.eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; font-family: var(--fonte-texto); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--verde); }
+.eyebrow span { color: var(--texto-suave); font-variant-numeric: tabular-nums; letter-spacing: 0.08em; }
+.eyebrow span::after { content: ''; display: inline-block; width: 28px; height: 1px; margin-left: 12px; vertical-align: middle; background: currentColor; opacity: 0.6; }
+
+/* Títulos: Raleway firme, sem gritar */
+.section-title, .ebook-title { font-family: var(--fonte-titulo); font-weight: 800; text-transform: none; letter-spacing: -0.025em; line-height: 1.08; font-size: clamp(2rem, 3.6vw, 3rem); margin-bottom: 1.25rem; }
+.ebook-title { font-size: clamp(2rem, 3.4vw, 2.8rem) !important; }
+.hero-title { font-weight: 800; letter-spacing: -0.03em; line-height: 0.92; font-size: clamp(3rem, 6.4vw, 5.6rem); margin-bottom: 1.4rem; }
+.hero-subtitle { font-family: var(--fonte-texto); font-weight: 500; font-size: clamp(0.8rem, 1vw, 0.88rem); letter-spacing: 0.2em; text-transform: uppercase; color: var(--verde); margin-bottom: 1.6rem; }
+.hero-bio { font-size: clamp(1.05rem, 1.35vw, 1.2rem); line-height: 1.6; color: #d4d7e4; max-width: 30em; }
+
+/* Sem rabisco: a palavra em verde já basta */
+.section-title .verde, .contato-section .section-title .verde { background: none !important; padding-bottom: 0; display: inline; }
+
+/* Marca-texto só no topo; no corpo, ênfase discreta com fio verde */
+.section .highlight-orange {
+    color: var(--texto-forte); -webkit-text-fill-color: var(--texto-forte); font-weight: 600;
+    padding: 0; border-radius: 0; white-space: normal;
+    background: linear-gradient(var(--verde), var(--verde)) no-repeat 0 100% / 100% 1px;
+    transition: background-size 0.6s 0.3s ease-out;
+}
+.section:not(.animate-in) .highlight-orange { background-size: 0 1px; }
+.hero-bio strong { font-weight: 600; padding: 0.02em 0.28em; }
+
+/* Títulos de cartão, etapas e textos menores */
+.oferta-title { font-family: var(--fonte-titulo); font-weight: 700; text-transform: none; letter-spacing: -0.01em; font-size: 1.3rem; line-height: 1.2; margin-bottom: 0.6rem; }
+.oferta-description { color: var(--texto); font-weight: 400; font-size: 1rem; line-height: 1.65; }
+.paragraph-title { font-family: var(--fonte-titulo); font-weight: 700; color: var(--texto-forte); -webkit-text-fill-color: var(--texto-forte); font-size: 1.15rem; letter-spacing: -0.01em; margin-bottom: 0.4rem; }
+.sobre-paragraph p, .metodo-text p, .ebook-description, .section-text, .section-description { font-size: 1.02rem; line-height: 1.7; color: var(--texto); font-weight: 400; }
+.gp-item strong { font-family: var(--fonte-titulo); font-weight: 700; font-size: 0.98rem; }
+.gp-item span { font-size: 0.8rem; color: var(--texto-suave); }
+.gp-trilho { font-family: var(--fonte-texto); font-weight: 600; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--texto-suave); }
+.gp-metricas { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.02em; color: var(--texto-suave); }
+.depoimento blockquote { font-size: 1.02rem; line-height: 1.65; color: #dfe2ee; font-weight: 400; }
+.depoimento strong { font-family: var(--fonte-titulo); font-weight: 700; }
+.depoimento span { font-weight: 400; color: var(--texto-suave); }
+.depoimento small { font-weight: 500; color: var(--verde); letter-spacing: 0.01em; }
+.blog-title { font-family: var(--fonte-titulo); font-weight: 700; font-size: 1.12rem; line-height: 1.3; letter-spacing: -0.01em; }
+.blog-excerpt { font-weight: 400; font-size: 0.92rem; line-height: 1.6; color: var(--texto-suave); }
+.blog-read-time { font-weight: 600; font-size: 0.7rem; letter-spacing: 0.14em; }
+.blog-link, .sobre-mais { font-weight: 600; }
+.nav-logo-link { font-family: var(--fonte-titulo); font-weight: 800 !important; letter-spacing: 0.04em !important; font-size: 1rem; }
+.nav-link { font-family: var(--fonte-texto); font-weight: 500; font-size: 0.88rem; color: #b9bdd0; }
+.nav-link:hover, .nav-link.active { color: #fff; }
+.hero-cta, .ebook-link, .amazon-link, .download-link, .blog-cta-button { font-family: var(--fonte-texto); font-weight: 600; text-transform: none; letter-spacing: 0.005em; font-size: 0.95rem; }
+.contact-email, .contato-section .contact-email { font-family: var(--fonte-titulo); font-weight: 700; }
+.footer-text, .footer-disclaimer { font-size: 0.82rem; color: var(--texto-suave); }
+
+/* Rodada 2: espaçamento e grid */
+.container, .hero-container { max-width: 1180px; padding-left: 32px; padding-right: 32px; }
+.section { padding: 128px 0; }
+.section + .section { border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.section-title { max-width: 18em; }
+
+/* Topo: mais respiro e a fileira de logos separada por fio */
+.hero-section { min-height: min(760px, 88vh); }
+.hero-text { max-width: 600px; }
+.hero-acoes { margin-top: 2.2rem; gap: 12px; }
+.hero-logos { margin-top: 3rem; padding-top: 1.6rem; border-top: 1px solid rgba(255, 255, 255, 0.08); gap: 14px 30px; max-width: 520px; }
+
+/* Atuação */
+.ofertas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 3rem; }
+
+/* Jornada: retrato maior, texto em coluna de leitura */
+.sobre-content { grid-template-columns: 5fr 7fr; gap: clamp(3rem, 7vw, 6.5rem); align-items: start; max-width: none; }
+.sobre-image { position: sticky; top: 110px; justify-content: stretch; }
+.sobre-profile-image { width: 100%; max-width: none; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; }
+.sobre-paragraph { padding-bottom: 1.4rem; margin-bottom: 0.2rem; max-width: 36em; }
+
+/* Método: texto antes, em duas colunas; trilha depois */
+.metodo-content { display: flex; flex-direction: column; gap: 3.5rem; margin-top: 0.5rem; }
+.metodo-text { order: -1; max-width: none; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.metodo-text p { margin: 0; }
+.growth-path { margin: 0; }
+.gp-lista { gap: 12px; }
+.gp-item { padding: 18px 16px 20px; gap: 4px; }
+.gp-metricas { margin-top: 18px; }
+
+/* Livro: capa no tamanho certo, sem vão */
+.ebook-content { grid-template-columns: 5fr 7fr; gap: clamp(3rem, 7vw, 6.5rem); max-width: none; }
+.ebook-cover-image { max-width: 300px; }
+.ebook-description { max-width: 34em; }
+.ebook-links { margin-top: 2rem; }
+
+/* Clientes: grade regular */
+.logos-grid { grid-template-columns: repeat(5, 1fr); gap: 0; margin: 3rem 0 0; max-width: none; }
+.logo-item { width: 100%; height: 96px; padding: 0 18px; border-radius: 0; }
+.company-logo { width: auto; height: auto; max-width: 110px; max-height: 34px; }
+.testimonials-modern { gap: 24px; margin-top: 4rem; }
+.depoimento { padding: 32px; gap: 28px; }
+
+/* Blog */
+.blog-topo { margin-bottom: 40px; }
+.blog-grid { gap: 32px 28px; }
+.blog-content { padding-top: 18px; }
+
+/* Contato */
+.contato-section .section-content { max-width: none; padding: 80px 64px; }
+.footer-section { padding: 40px 0 48px; }
+
+/* Rodada 3: bordas, botões, cartões e micro-interações */
+:root { --linha: rgba(255, 255, 255, 0.08); --linha-forte: rgba(255, 255, 255, 0.16); --curva: cubic-bezier(0.2, 0.7, 0.2, 1); }
+::selection { background: var(--verde); color: var(--navy); }
+:focus-visible { outline: 2px solid var(--verde); outline-offset: 3px; }
+body::after { opacity: 0.18; }
+.section { padding: 112px 0; }
+
+/* Menu: vidro escuro e fio fino */
+.main-nav { background: rgba(0, 0, 22, 0.78); -webkit-backdrop-filter: saturate(140%) blur(14px); backdrop-filter: saturate(140%) blur(14px); border-bottom: 1px solid var(--linha); }
+.nav-link::after { height: 1px; bottom: -6px; box-shadow: none; transition: width 0.35s var(--curva); }
+
+/* Botões: retos, firmes, com seta que anda */
+.hero-cta, .ebook-link, .amazon-link, .download-link, .blog-cta-button {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 50px; padding: 0 24px; border-radius: 4px; border-width: 1px; border-style: solid;
+    transition: background-color 0.25s var(--curva), border-color 0.25s var(--curva), color 0.25s var(--curva);
+    transform: none !important; box-shadow: none !important;
+}
+.hero-cta:not(.hero-cta-secundario), .download-link { background: var(--verde); border-color: var(--verde); color: var(--navy); }
+.hero-cta:not(.hero-cta-secundario):hover, .download-link:hover { background: #22dcb5; border-color: #22dcb5; color: var(--navy); }
+.hero-cta-secundario, .amazon-link { background: transparent; border-color: var(--linha-forte); color: #fff; }
+.hero-cta-secundario:hover, .hero-cta-secundario:focus-visible, .amazon-link:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.5); color: #fff; }
+.hero-cta:not(.hero-cta-secundario)::after, .download-link::after { content: '\2192'; display: inline-block; transition: transform 0.3s var(--curva); }
+.hero-cta:not(.hero-cta-secundario):hover::after, .download-link:hover::after { transform: translateX(4px); }
+.blog-cta-button { min-height: 44px; padding: 0 18px; color: #fff; border-color: var(--linha-forte); }
+.blog-cta-button:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.5); color: #fff; }
+
+/* Logos: monocromáticos, sem competir */
+.hero-logos img, .company-logo { filter: grayscale(1) brightness(0) invert(1); opacity: 0.55; transition: opacity 0.3s var(--curva); }
+.logo-item:hover .company-logo { opacity: 0.95; }
+.logos-grid { border-top: 1px solid var(--linha); border-left: 1px solid var(--linha); }
+.logo-item { border-right: 1px solid var(--linha) !important; border-bottom: 1px solid var(--linha) !important; }
+
+/* Cartões de atuação */
+.oferta-card { display: flex; flex-direction: column; position: relative; overflow: visible; padding: 36px 36px 40px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01)); border: 1px solid var(--linha); border-radius: 8px; transition: border-color 0.35s var(--curva), background-color 0.35s var(--curva); }
+.oferta-card::after { content: ''; position: absolute; top: -1px; left: 36px; width: 48px; height: 2px; background: var(--verde); transition: width 0.5s var(--curva); }
+.oferta-card:hover { transform: none; border-color: var(--linha-forte); }
+.oferta-card:hover::after { width: 96px; }
+.oferta-topo { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+.oferta-icone { width: 40px; height: 40px; fill: none; stroke: var(--verde); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.oferta-fase { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--texto-suave); }
+
+/* Jornada: linha do tempo fina */
+.sobre-paragraph { border-left: 1px solid var(--linha-forte); padding-left: 28px; }
+.sobre-paragraph::before { left: -5px; top: 7px; width: 9px; height: 9px; background: var(--navy); border: 1.5px solid var(--verde); box-shadow: 0 0 0 4px var(--navy); }
+.sobre-profile-image { border-radius: 8px; outline: 1px solid var(--linha); outline-offset: -1px; filter: saturate(0.95); }
+.sobre-mais, .blog-link { display: inline-flex; gap: 6px; transition: color 0.25s var(--curva), gap 0.3s var(--curva); }
+.sobre-mais:hover, .blog-link:hover { color: #fff; gap: 10px; }
+
+/* Growth Path: traço fino, destaque contornado */
+.gp-trilho i { height: 1px; background: var(--linha-forte); }
+.gp-trilho i::after { border-left-color: var(--linha-forte); }
+.gp-item { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--linha); border-radius: 6px; transition: border-color 0.3s var(--curva), background-color 0.3s var(--curva); }
+.gp-item:hover { border-color: var(--linha-forte); background: rgba(255, 255, 255, 0.04); }
+.gp-item svg { width: 28px; height: 28px; margin-bottom: 14px; stroke-width: 1.8; }
+.gp-destaque { background: rgba(0, 199, 159, 0.08); border-color: rgba(0, 199, 159, 0.55); }
+.gp-destaque svg { stroke: var(--verde); }
+.gp-destaque strong { color: #fff; }
+.gp-destaque span { color: #9fe9d6; }
+
+/* Livro: luz quente mais contida */
+.ebook-image::before { background: radial-gradient(closest-side, rgba(199, 154, 60, 0.18), rgba(199, 154, 60, 0)); }
+.ebook-cover-image { filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.55)); transition: transform 0.6s var(--curva); }
+.ebook-cover-image:hover { transform: translateY(-4px) rotate(-0.6deg); }
+
+/* Depoimentos */
+.depoimento { background: rgba(255, 255, 255, 0.025); border: 1px solid var(--linha); border-radius: 8px; }
+.depoimento blockquote { padding-top: 34px; }
+.depoimento blockquote::before { content: '\201C'; top: -10px; left: -2px; font-family: var(--fonte-titulo); font-weight: 700; font-size: 3rem; color: var(--verde); opacity: 0.85; }
+.depoimento figcaption { padding-top: 20px; border-top: 1px solid var(--linha); }
+.depoimento img { width: 44px; height: 44px; outline: 1px solid var(--linha-forte); outline-offset: 2px; }
+
+/* Blog */
+.blog-image { border-radius: 6px; outline: 1px solid var(--linha); outline-offset: -1px; }
+.blog-image-real { transition: transform 0.7s var(--curva); }
+.blog-card:hover .blog-image-real { transform: scale(1.025); }
+.blog-title { transition: color 0.25s var(--curva); }
+.blog-card:hover .blog-title { color: #fff; -webkit-text-fill-color: #fff; text-decoration: underline; text-decoration-color: var(--verde); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
+/* Contato: painel escuro com luz verde, não um bloco chapado */
+.contato-section .section-content {
+    position: relative; overflow: hidden; border-radius: 12px; color: var(--texto);
+    background: radial-gradient(120% 90% at 50% 0%, rgba(0, 199, 159, 0.16), rgba(0, 199, 159, 0) 60%), #050826;
+    border: 1px solid var(--linha);
+}
+.contato-section .section-content::before { content: ''; position: absolute; top: 0; left: 50%; width: 120px; height: 2px; transform: translateX(-50%); background: var(--verde); }
+.contato-section .eyebrow { justify-content: center; }
+.contato-section .section-title { color: #fff; -webkit-text-fill-color: #fff; margin-left: auto; margin-right: auto; }
+.contato-section .section-title .verde { color: var(--verde); -webkit-text-fill-color: var(--verde); }
+.contato-section .section-text { color: var(--texto); font-weight: 400; margin-left: auto; margin-right: auto; }
+.contato-section .section-text strong { color: #fff; -webkit-text-fill-color: #fff; font-weight: 600; }
+.contact-email, .contato-section .contact-email { color: #fff; -webkit-text-fill-color: #fff; text-decoration: none; background: linear-gradient(var(--verde), var(--verde)) no-repeat 0 100% / 100% 1px; padding-bottom: 4px; transition: color 0.25s var(--curva); }
+.contato-section .contact-email:hover { color: var(--verde); -webkit-text-fill-color: var(--verde); }
+.contato-section .social-links { gap: 10px; margin-top: 32px; }
+.contato-section .social-link { width: 42px; height: 42px; background: transparent; border: 1px solid var(--linha-forte); color: #c4c8d8; transition: color 0.25s var(--curva), border-color 0.25s var(--curva); }
+.contato-section .social-link:hover { transform: none; box-shadow: none; background: transparent; color: var(--verde); border-color: var(--verde); }
+.contato-section .social-link svg { width: 18px; height: 18px; }
+.social-icon-image { width: 20px; height: 20px; filter: grayscale(1) brightness(1.6); opacity: 0.85; }
+
+/* Rodapé */
+.footer-section { border-top: 1px solid var(--linha); }
+.footer-text .footer-link, .footer-disclaimer .footer-link { text-decoration: none; color: var(--texto); transition: color 0.2s; }
+.footer-text .footer-link:hover, .footer-disclaimer .footer-link:hover { color: var(--verde); }
+
+/* Ajustes finos do desktop */
+.section-title { max-width: 22em; text-wrap: balance; }
+.hero-logos { max-width: 600px; gap: 14px 28px; }
+.oferta-icone { flex: none; width: 36px; height: 36px; }
+.oferta-topo { justify-content: flex-start; gap: 14px; }
+.contato-section .section-text { max-width: 34em; }
+
+/* Rodada 4: tablet e celular */
+@media (max-width: 1024px) {
+    .sobre-content, .ebook-content { gap: 3rem; }
+    .gp-lista { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 900px) {
+    .container, .hero-container { padding-left: 22px; padding-right: 22px; }
+    .section { padding: 80px 0; }
+    .section-title, .ebook-title, .section-content, .section-text, .section-description { text-align: left; margin-left: 0; margin-right: 0; }
+    .section-title { font-size: clamp(1.85rem, 7.4vw, 2.4rem); }
+    .ebook-title { font-size: clamp(1.85rem, 7.4vw, 2.4rem) !important; }
+    .ofertas-grid, .sobre-content, .ebook-content, .metodo-text { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+    .sobre-content, .ebook-content { gap: 2.5rem; }
+    .sobre-text, .sobre-image, .ebook-text, .ebook-image { order: initial; min-width: 0; }
+    .sobre-image { position: static; }
+    .sobre-profile-image { max-width: 420px; aspect-ratio: 1 / 1; }
+    .metodo-content { gap: 2.5rem; }
+    .metodo-text { gap: 1.2rem; }
+    .logos-grid { grid-template-columns: repeat(3, 1fr); }
+    .testimonials-modern { grid-template-columns: minmax(0, 1fr); }
+    .contato-section .section-content { padding: 56px 28px; text-align: left; }
+    .contato-section .eyebrow { justify-content: flex-start; }
+    .contato-section .section-content::before { left: 28px; transform: none; }
+    .contato-section .social-links { justify-content: flex-start; }
+}
+@media (max-width: 768px) {
+    .hero-container { margin-top: -40px; padding-bottom: 56px; }
+    .hero-video-bg { height: 300px; }
+    .hero-text { max-width: 100%; }
+    .hero-title { font-size: clamp(2.7rem, 13vw, 3.6rem); margin-bottom: 1rem; }
+    .hero-subtitle { font-size: 0.72rem; letter-spacing: 0.16em; line-height: 1.6; margin-bottom: 1.2rem; }
+    .hero-bio { font-size: 1.05rem; max-width: none; }
+    .hero-acoes { flex-wrap: wrap; gap: 10px; margin-top: 1.8rem; }
+    .hero-cta { flex: 1 1 100%; min-height: 52px; font-size: 0.95rem; padding: 0 20px; }
+    .hero-logos { gap: 14px 22px; margin-top: 2.2rem; padding-top: 1.4rem; }
+    .hero-logos li { height: 22px; }
+    .hero-logos img { max-height: 22px; }
+    .section { padding: 72px 0; }
+    .eyebrow { margin-bottom: 14px; }
+    .oferta-card { padding: 28px 24px 30px; }
+    .oferta-card::after { left: 24px; }
+    .oferta-topo { margin-bottom: 20px; }
+    .oferta-title { font-size: 1.2rem; }
+    .sobre-paragraph { padding-left: 22px; }
+    .gp-lista { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .gp-item { padding: 16px 14px; }
+    .gp-item svg { margin-bottom: 10px; }
+    .ebook-cover-image { max-width: 220px; }
+    .ebook-links { flex-direction: column; align-items: stretch; }
+    .ebook-link { width: 100%; }
+    .logo-item { height: 76px; padding: 0 12px; }
+    .company-logo { max-width: 84px; max-height: 26px; }
+    .depoimento { padding: 24px; }
+    .blog-grid { gap: 20px; }
+    .blog-card { grid-template-columns: 104px 1fr; column-gap: 16px; }
+    .blog-image { border-radius: 4px; }
+    .blog-content { padding-top: 0; }
+    .blog-title { font-size: 1rem; }
+    .blog-cta-button { width: 100%; }
+    .contato-section .section-content { padding: 48px 22px; border-radius: 10px; }
+    .contato-section .section-content::before { left: 22px; }
+    .contact-email, .contato-section .contact-email { font-size: 1.15rem; }
+    .footer-text { line-height: 2; }
+}
+@media (max-width: 900px) {
+    .sobre-content, .ebook-content { padding-left: 0; padding-right: 0; }
+    .oferta-card { margin-left: 0; margin-right: 0; }
+    .ebook-image { order: -1; justify-content: flex-start; }
+    .ebook-image::before { inset: -10% 10% -10% -20%; }
+    .logos-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 768px) {
+    .ebook-cover-image { max-width: 180px; }
+    .logo-item { height: 68px; padding: 0 8px; }
+    .company-logo { max-width: 66px; max-height: 22px; }
+}
+@media (max-width: 900px) {
+    .contato-section .section-text, .contato-section .contact-info { text-align: left; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+    .contato-section .social-links { gap: 8px; }
+    .contato-section .social-link { width: 40px; height: 40px; }
+}
+
+/* Páginas internas (sobre, contato, privacidade, 404) */
+.inner-page h1, .inner-page h2 { font-family: var(--fonte-titulo); letter-spacing: -0.02em; }
+.inner-page h1 { font-weight: 800; }
+.inner-page h2 { font-weight: 700; }
+.inner-page a { text-decoration-thickness: 1px; text-underline-offset: 3px; }

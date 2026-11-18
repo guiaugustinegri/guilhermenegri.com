@@ -91,14 +91,18 @@ document.addEventListener('DOMContentLoaded', function() {
     style.textContent = `
         .section {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(16px);
+            transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
         }
 
         .blog-card {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(12px);
+            transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .section, .blog-card { opacity: 1; transform: none; transition: none; }
         }
 
         .animate-in {

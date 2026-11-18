@@ -2,7 +2,7 @@
 
 Especialista em Crescimento de Startups. Site oficial: https://guilhermenegri.com/
 
-Ajudo startups a validar produtos e construir crescimento previsível da primeira venda ao scale-up. Mais de 240 empresas atendidas.
+Ajudo startups a validar produtos e construir crescimento previsível da primeira venda ao scale-up. Mais de 300 startups atendidas.
 
 ## Atuação
 

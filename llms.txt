@@ -1,5 +1,5 @@
 # Guilherme Negri
-> Site oficial de Guilherme Negri, especialista em crescimento de startups e cofundador da Tração.Online. Mentoria e consultoria para validar produto e construir crescimento previsível da primeira venda ao scale-up. Mais de 240 empresas atendidas.
+> Site oficial de Guilherme Negri, especialista em crescimento de startups e cofundador da Tração.Online. Mentoria e consultoria para validar produto e construir crescimento previsível da primeira venda ao scale-up. Mais de 300 startups atendidas.
 
 Use as versões markdown ligadas abaixo (ou `Accept: text/markdown` na URL canônica) em vez de raspar o HTML. O domínio canônico é https://guilhermenegri.com/ — https://guilhermenegri.com.br/ só redireciona para cá. Contato humano: guilherme@tracao.online.
 

@@ -1,6 +1,6 @@
 # Sobre Guilherme Negri
 
-Guilherme Negri é especialista em crescimento de startups e cofundador da Tração.Online. Ele ajuda founders a validar produtos com clientes reais e a construir uma máquina de crescimento previsível, da primeira venda ao scale-up. O trabalho já passou por mais de 240 empresas, de alumni da Y Combinator a corporações como Unilever e VTEX.
+Guilherme Negri é especialista em crescimento de startups e cofundador da Tração.Online. Ele ajuda founders a validar produtos com clientes reais e a construir uma máquina de crescimento previsível, da primeira venda ao scale-up. O trabalho já passou por mais de 300 startups, de alumni da Y Combinator a corporações como Unilever e VTEX.
 
 Antes de mentorar outras empresas, Guilherme fundou quatro startups de tecnologia e percorreu o ciclo completo: ideia, primeiros clientes, pivôs e a busca por um caminho sustentável de tração. Essa prática virou o método Growth Path, um sistema de diagnóstico que decompõe o crescimento em funções vitais — atrair o público certo, converter interesse em negócio e manter clientes no longo prazo.
 
