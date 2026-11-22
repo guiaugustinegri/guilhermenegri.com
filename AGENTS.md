@@ -14,6 +14,9 @@ Site pessoal do Guilherme Negri. HTML/CSS/JS puro, sem framework e sem build.
   O Worker `guilhermenegri-com` (`src/worker.js`) é Custom Domain nesse host e faz
   proxy de `https://guilhermenegri.com`. Arquivos continuam no GitHub Pages.
 - Todo arquivo commitado vira URL pública (ex.: `guilhermenegri.com/README.md`).
+- **IndexNow** (Bing, Copilot, ChatGPT), desde 22/11/2026: a chave fica em
+  `45982ebb564faffb10c9591b70b76641.txt` na raiz. Depois de um push que mude página, avise as URLs do
+  `sitemap.xml` com um POST em `https://api.indexnow.org/indexnow` (`host`, `key`, `keyLocation`, `urlList`).
 
 ## Links que têm dono (não "corrigir" sem contexto)
 

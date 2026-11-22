@@ -311,3 +311,10 @@ test("explicitly unacceptable types return 406", async () => {
   assert.equal(res.status, 406);
   assert.match(res.headers.get("vary"), /Accept/i);
 });
+
+test("IndexNow: o arquivo da chave fica na raiz e contem so a chave", async () => {
+  const chave = "45982ebb564faffb10c9591b70b76641";
+  const corpo = await readFile(join(ROOT, `${chave}.txt`), "utf8");
+  assert.equal(corpo, chave);
+});
+
